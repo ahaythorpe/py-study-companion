@@ -27,9 +27,10 @@ import {
   type PySetup,
   type Quarter,
 } from "@/lib/logbook";
+import { Documents } from "./Documents";
 import { btnGhost, btnPrimary, field, panel } from "./ui";
 
-type Tab = "overview" | "log" | "setup";
+type Tab = "overview" | "log" | "documents" | "setup";
 
 const round = (n: number) => Math.round(n * 100) / 100;
 
@@ -46,12 +47,13 @@ export function Logbook() {
   const tabs: { id: Tab; label: string }[] = [
     { id: "overview", label: "Overview" },
     { id: "log", label: `Log (${book.entries.length})` },
+    { id: "documents", label: "Documents" },
     { id: "setup", label: "Setup" },
   ];
 
   return (
     <div className="space-y-6">
-      <div role="tablist" className="flex gap-1 rounded-xl border border-line bg-surface p-1 sm:w-fit">
+      <div role="tablist" className="flex flex-wrap gap-1 rounded-xl border border-line bg-surface p-1 sm:w-fit">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -68,6 +70,7 @@ export function Logbook() {
 
       {tab === "overview" && <Overview book={book} onSetup={() => setTab("setup")} />}
       {tab === "log" && <Log book={book} />}
+      {tab === "documents" && <Documents />}
       {tab === "setup" && <Setup setup={book.setup} onSaved={() => setTab("overview")} />}
     </div>
   );
@@ -87,7 +90,7 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
           <div>
             <h2 className="font-semibold">Set up your Professional Year</h2>
             <p className="text-sm text-muted">
-              Add your start date, supervisor and licensee so the checklist and dates work.
+              Add your start date and supervisor and licensee so the checklist and dates work.
             </p>
           </div>
           <button type="button" onClick={onSetup} className={btnPrimary}>
@@ -98,9 +101,9 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
 
       {q3Started && !s.q3Ready && (
         <div className="rounded-[14px] border border-warn/30 bg-warn-soft p-4 text-sm text-warn">
-          You have Q3 or Q4 entries, but not every requirement for starting Q3 is ticked below. Before
-          Q3 you need both Q1 and Q2 certificates, the qualifications standard, a passed exam, and
-          licensee authorisation.
+          You have Q3 or Q4 entries but not every requirement for starting Q3 is ticked below. Before
+          Q3 you need both Q1 and Q2 certificates and the qualifications standard. You also need a passed
+          exam and licensee authorisation.
         </div>
       )}
 
@@ -130,7 +133,7 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
                   <h3 className="font-semibold">Quarter {q}</h3>
                   <p className="text-xs text-muted">
                     {QUARTER_INFO[q].supervision}
-                    {rec.start && ` · ${formatDate(rec.start)}–${formatDate(rec.end) || "?"}`}
+                    {rec.start && ` · ${formatDate(rec.start)} to ${formatDate(rec.end) || "?"}`}
                   </p>
                 </div>
                 {rec.certificateDate ? (
@@ -346,10 +349,10 @@ function AddEntry({ setup }: { setup: PySetup }) {
         className={field}
         placeholder={
           type === "dilemma"
-            ? "Dilemma, e.g. Client asks to switch super against their interests"
+            ? "Dilemma: e.g. Client asks to switch super against their interests"
             : type === "notification"
-              ? "Client, e.g. J. Smith (initials only)"
-              : "What you did, e.g. Drafted SOA for retirement strategy"
+              ? "Client: e.g. J. Smith (initials only)"
+              : "What you did: e.g. Drafted SOA for retirement strategy"
         }
       />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -381,9 +384,9 @@ function AddEntry({ setup }: { setup: PySetup }) {
           ))}
         </select>
       )}
-      {type === "training" && <input name="provider" placeholder="Provider (e.g. licensee, university, FAAA)" className={field} />}
+      {type === "training" && <input name="provider" placeholder="Provider (e.g. licensee or university or FAAA)" className={field} />}
       {type === "dilemma" && (
-        <input name="standards" placeholder="Code of Ethics standards applied (e.g. 2, 3, 6)" className={field} />
+        <input name="standards" placeholder="Code of Ethics standards applied (e.g. 2 3 6)" className={field} />
       )}
       <textarea
         name="details"
@@ -391,7 +394,7 @@ function AddEntry({ setup }: { setup: PySetup }) {
         className={field}
         placeholder={
           type === "dilemma"
-            ? "The issue, options considered, and how you resolved it"
+            ? "The issue and the options considered. How you resolved it"
             : "Details (optional). Don't include client names or personal information."
         }
       />
@@ -431,7 +434,7 @@ function Entry({ entry, counts }: { entry: LogEntry; counts: boolean }) {
       <div className="flex flex-wrap items-center gap-2">
         <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${badge[entry.type]}`}>{typeLabel}</span>
         {entry.standards && <span className="text-xs text-muted">Standards: {entry.standards}</span>}
-        {!counts && <span className="text-xs text-warn">Before PY start, doesn&apos;t count</span>}
+        {!counts && <span className="text-xs text-warn">Before PY start. Doesn&apos;t count</span>}
       </div>
       {entry.details && <p className="whitespace-pre-line text-sm">{entry.details}</p>}
       <div className="text-xs text-muted">

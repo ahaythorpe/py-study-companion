@@ -14,6 +14,10 @@ function shuffle<T>(items: T[]): T[] {
 /**
  * Leitner ordering: lowest box first, then oldest lastSeen. New questions count
  * as box 1, never seen. Shuffling before a stable sort randomises ties.
+ *
+ * Each principle is asked once per session where possible, so the variant you
+ * see rotates (the least recently seen comes first) and a principle is tested
+ * in different wordings across sessions rather than the same card every time.
  */
 export function buildSession(
   questions: Question[],
@@ -22,14 +26,27 @@ export function buildSession(
 ): Question[] {
   const box = (q: Question) => progress[q.id]?.box ?? 1;
   const lastSeen = (q: Question) => progress[q.id]?.lastSeen ?? 0;
-  return shuffle(questions)
-    .sort((a, b) => box(a) - box(b) || lastSeen(a) - lastSeen(b))
-    .slice(0, length);
+  const ordered = shuffle(questions).sort((a, b) => box(a) - box(b) || lastSeen(a) - lastSeen(b));
+
+  const picked: Question[] = [];
+  const principles = new Set<string>();
+  for (const q of ordered) {
+    if (picked.length === length) break;
+    if (principles.has(q.principle)) continue;
+    principles.add(q.principle);
+    picked.push(q);
+  }
+  // Too few principles to fill the session: top up with other variants.
+  for (const q of ordered) {
+    if (picked.length === length) break;
+    if (!picked.includes(q)) picked.push(q);
+  }
+  return picked;
 }
 
 /**
- * Exam-style mix: the real exam splits questions equally across the three
- * areas, so take the same number from each, Leitner-ordered, then shuffle.
+ * Exam-style mix: the exam covers all three areas (ASIC doesn't publish the
+ * split), so take the same number from each, Leitner-ordered, then shuffle.
  */
 export function buildBalancedSession(
   questions: Question[],

@@ -18,10 +18,10 @@ export function ResultScreen({ score, total, onRestart }: Props) {
       <p className="text-muted">
         {pct}% correct.{" "}
         {pct >= 75
-          ? "Above the top of the 65–74% range ASIC starts from when setting the pass mark."
+          ? "Above the top of the 65 to 74% range ASIC starts from when setting the pass mark."
           : pct >= 65
-            ? "Inside the 65–74% range ASIC starts from when setting the pass mark, so aim higher for a buffer."
-            : "Below the 65–74% range ASIC starts from when setting the pass mark."}{" "}
+            ? "Inside the 65 to 74% range ASIC starts from when setting the pass mark. Aim higher for a buffer."
+            : "Below the 65 to 74% range ASIC starts from when setting the pass mark."}{" "}
         Missed questions will come back first.
       </p>
       <div className="flex justify-center gap-3">

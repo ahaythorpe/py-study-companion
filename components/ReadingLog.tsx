@@ -109,7 +109,7 @@ function AddForm() {
         onClick={() => setOpen(true)}
         className="w-full rounded-lg border-2 border-dashed border-line px-4 py-3 font-medium text-muted hover:border-accent hover:text-accent"
       >
-        + Add a book, article, course or podcast
+        + Add a book or article or course or podcast
       </button>
     );
   }

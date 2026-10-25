@@ -14,22 +14,22 @@ export const QUARTER_INFO: Record<Quarter, { supervision: string; activities: st
   1: {
     supervision: "Direct supervision",
     activities:
-      "Shadow your supervisor in client meetings, do post-meeting documentation and follow-up, discuss advice strategies, help with admin.",
+      "Shadow your supervisor in client meetings. Do post-meeting documentation and follow-up. Discuss advice strategies and help with admin.",
   },
   2: {
     supervision: "Direct supervision",
     activities:
-      "Prepare for and conduct client meetings, draft advice documents including SOAs, complete admin.",
+      "Prepare for and conduct client meetings. Draft advice documents including SOAs. Complete admin.",
   },
   3: {
     supervision: "Indirect supervision",
     activities:
-      "Model strategies and research products, prepare SOAs, complete admin, resolve at least 2 ethical dilemmas.",
+      "Model strategies and research products. Prepare SOAs and complete admin. Resolve at least 2 ethical dilemmas.",
   },
   4: {
     supervision: "Indirect supervision",
     activities:
-      "As for Q3, resolve at least 2 more ethical dilemmas, and reach the Determination's outcomes and key competencies.",
+      "As for Q3. Resolve at least 2 more ethical dilemmas. Reach the Determination's outcomes and key competencies.",
   },
 };
 
@@ -40,7 +40,7 @@ export const ENTRY_TYPES: { id: EntryType; label: string; hint: string }[] = [
   {
     id: "training",
     label: "Structured training",
-    hint: "Counts toward the 100 training hours. Must be separate from work, done during your PY, and not the exam.",
+    hint: "Counts toward the 100 training hours. Must be separate from work and done during your PY. The exam doesn't count.",
   },
   {
     id: "dilemma",
@@ -226,12 +226,12 @@ export function summarise({ setup, entries }: Logbook) {
       detail: "Needed before Q3. Licensee appoints you on the FAR within 30 business days",
     },
     {
-      label: `Q3 certificate, with ${DILEMMAS_PER_QUARTER}+ ethical dilemmas`,
+      label: `Q3 certificate with ${DILEMMAS_PER_QUARTER}+ ethical dilemmas`,
       done: !!q[3].certificateDate && dilemmas(3) >= DILEMMAS_PER_QUARTER,
       detail: `${dilemmas(3)} dilemma${dilemmas(3) === 1 ? "" : "s"} logged in Q3`,
     },
     {
-      label: `Q4 certificate, with ${DILEMMAS_PER_QUARTER}+ ethical dilemmas`,
+      label: `Q4 certificate with ${DILEMMAS_PER_QUARTER}+ ethical dilemmas`,
       done: !!q[4].certificateDate && dilemmas(4) >= DILEMMAS_PER_QUARTER,
       detail: `${dilemmas(4)} dilemma${dilemmas(4) === 1 ? "" : "s"} logged in Q4`,
     },

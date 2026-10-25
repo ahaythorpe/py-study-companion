@@ -38,19 +38,19 @@ export function Dashboard() {
           <h1 className={h1}>Your topics</h1>
           <p className={intro}>
             Organised by the three areas of the ASIC financial adviser exam. After 5 attempts a topic is
-            weak under 65%, borderline at 65–74% (ASIC&apos;s starting range for the pass mark) and
-            exam-ready from 75%. Missed questions come back first.
+            weak under 65%. It is borderline at 65 to 74% (ASIC&apos;s starting range for the pass mark).
+            It is exam-ready from 75%. Missed questions come back first.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Stat label="Answered">
-            {loading ? "–" : answered}{" "}
+            {loading ? "…" : answered}{" "}
             <small className="text-sm font-medium text-muted">/ {QUESTIONS.length}</small>
           </Stat>
           <Stat label="Accuracy">
-            {loading || overall.accuracy === null ? "–" : `${Math.round(overall.accuracy * 100)}%`}
+            {loading || overall.accuracy === null ? "…" : `${Math.round(overall.accuracy * 100)}%`}
           </Stat>
-          <Stat label="Weak topics">{loading ? "–" : weakTopics}</Stat>
+          <Stat label="Weak topics">{loading ? "…" : weakTopics}</Stat>
         </div>
       </div>
 
@@ -74,10 +74,10 @@ export function Dashboard() {
               ) : null}
             </h2>
             <ul className="mt-1.5 grid gap-x-6 gap-y-1 text-sm text-muted sm:grid-cols-2">
-              <li>Multiple choice only, 70+ questions (no written answers since Jan 2024)</li>
-              <li>Equal split across the 3 areas below</li>
+              <li>Multiple choice and true/false only (no written answers since Jan 2024)</li>
+              <li>Tests the 3 areas below (ASIC doesn&apos;t publish the split)</li>
               <li>Open book for statutory material: the law is quoted in the question</li>
-              <li>Pass mark set each sitting from a 65–74% credit range</li>
+              <li>Pass mark set each sitting from a 65 to 74% credit range</li>
               <li>3.5 hours including 15 min reading; no penalty for wrong answers</li>
               <li>Must be passed before PY quarter 3</li>
             </ul>
@@ -103,7 +103,7 @@ export function Dashboard() {
                 ? "…"
                 : weakCount === 0
                   ? "Nothing to review yet. Questions you miss land here."
-                  : `${weakCount} ${weakCount === 1 ? "question" : "questions"} to review across all topics, worst first.`}
+                  : `${weakCount} ${weakCount === 1 ? "question" : "questions"} to review across all topics. Worst first.`}
             </p>
           </div>
         </div>
@@ -116,6 +116,18 @@ export function Dashboard() {
             Review weak questions
           </Link>
         )}
+      </section>
+
+      <section aria-label="Principles" className={`${panel} flex flex-wrap items-center justify-between gap-4 px-5 py-[18px]`}>
+        <div className="min-w-0 flex-[1_1_320px]">
+          <h2 className="text-[15px] font-semibold">Mastery by principle</h2>
+          <p className="mt-0.5 text-sm text-muted">
+            Each idea is asked several ways. See which principles you can answer however they&apos;re asked.
+          </p>
+        </div>
+        <Link href="/principles" className={btnGhost}>
+          View principles
+        </Link>
       </section>
 
       {AREAS.map((area, i) => {
@@ -191,7 +203,7 @@ function ResetButton() {
         }}
         className="rounded-lg bg-bad px-3 py-1.5 font-medium text-white hover:opacity-90"
       >
-        Yes, reset
+        Yes reset
       </button>
       <button
         type="button"

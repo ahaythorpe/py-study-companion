@@ -100,7 +100,8 @@ function Run({
         </div>
       </div>
 
-      {mode === "quiz" ? (
+      {/* Multi-statement and spot-the-issue questions are interactive in both modes. */}
+      {mode === "quiz" || question.kind === "multitf" || question.kind === "spot" ? (
         <>
           <QuestionCard key={question.id} question={question} onAnswer={answer} />
           {answered && (

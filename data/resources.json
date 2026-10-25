@@ -1,9 +1,9 @@
 [
   {
     "group": "Exam and Professional Year",
-    "title": "ASIC: Financial adviser exam preparation guidance (v6.0, Sept 2026)",
+    "title": "ASIC: Financial adviser exam preparation guidance (v6.0 · Sept 2026)",
     "url": "https://download.asic.gov.au/media/p1pleaco/financial-adviser-exam-exam-preparation-guidance-v6-published-29-sept-2026.pdf",
-    "note": "The official curriculum, learning outcomes and reading list. This app's topics are built from it."
+    "note": "The official curriculum and learning outcomes plus the reading list. This app's topics are built from it."
   },
   {
     "group": "Exam and Professional Year",
@@ -15,13 +15,13 @@
     "group": "Exam and Professional Year",
     "title": "ASIC: Professional year",
     "url": "https://www.asic.gov.au/regulatory-resources/financial-services/financial-advice/professional-standards/professional-year",
-    "note": "Quarter-by-quarter milestones, logbook requirements and completion certificates."
+    "note": "Milestones for each quarter. Logbook requirements and completion certificates."
   },
   {
     "group": "Exam and Professional Year",
     "title": "ASIC INFO 297: FAQs, Professional year",
     "url": "https://www.asic.gov.au/regulatory-resources/financial-services/financial-advice/professional-standards/professional-year/faqs-professional-year",
-    "note": "Detail on structured training, work activities, supervision, ethical dilemmas and the PY plan."
+    "note": "Detail on structured training and work activities. Also covers supervision and ethical dilemmas and the PY plan."
   },
   {
     "group": "Exam and Professional Year",
@@ -33,132 +33,176 @@
     "group": "Area 1: Regulatory and legal obligations",
     "title": "Corporations Act 2001",
     "url": "https://www.legislation.gov.au/C2004A00818/latest",
-    "note": "Chapter 7: Parts 7.6 (licensing, professional standards), 7.7 (disclosure), 7.7A (best interests and remuneration), 7.8, 7.9 (PDS), 7.10 and 7.10A (EDR).",
-    "topics": ["licensing", "disclosure", "remuneration", "best-interests"]
+    "note": "Chapter 7. Part 7.6 covers licensing and professional standards. Part 7.7 covers disclosure and Part 7.7A best interests and remuneration. Also Parts 7.8 and 7.9 (PDS) and 7.10 and 7.10A (EDR).",
+    "topics": [
+      "licensing",
+      "disclosure",
+      "remuneration",
+      "best-interests"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "RG 36: Licensing, financial product advice and dealing",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-36-licensing-financial-product-advice-and-dealing/",
-    "note": "What counts as financial product advice, and general versus personal advice.",
-    "topics": ["licensing", "disclosure"]
+    "note": "What counts as financial product advice. General versus personal advice.",
+    "topics": [
+      "licensing",
+      "disclosure"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "RG 78: Breach reporting by AFS licensees and credit licensees",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-78-breach-reporting-by-afs-licensees-and-credit-licensees/",
-    "note": "Reportable situations, the 30-day deadline and reporting about other licensees' advisers.",
-    "topics": ["licensing"]
+    "note": "Reportable situations and the 30-day deadline. Reporting about other licensees' advisers.",
+    "topics": [
+      "licensing"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "RG 175: Financial product advisers, conduct and disclosure",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-175-licensing-financial-product-advisers-conduct-and-disclosure/",
-    "note": "ASIC's main guide on the best interests duty, SOAs, FSGs and related obligations.",
-    "topics": ["disclosure", "best-interests"]
+    "note": "ASIC's main guide on the best interests duty. Covers SOAs and FSGs and related obligations.",
+    "topics": [
+      "disclosure",
+      "best-interests"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "RG 246: Conflicted and other banned remuneration",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-246-conflicted-and-other-banned-remuneration/",
     "note": "What counts as conflicted remuneration and the exceptions.",
-    "topics": ["remuneration"]
+    "topics": [
+      "remuneration"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "INFO 286: Ongoing fee arrangements and consents",
     "url": "https://www.asic.gov.au/regulatory-resources/financial-services/giving-financial-product-advice/fees/faqs-ongoing-fee-arrangements-and-consents",
-    "note": "Annual consent, renewal windows and account deduction consent after the DBFO reforms.",
-    "topics": ["remuneration"]
+    "note": "Annual consent and renewal windows. Account deduction consent after the DBFO reforms.",
+    "topics": [
+      "remuneration"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "AUSTRAC: AML/CTF obligations and guidance",
     "url": "https://www.austrac.gov.au/business/core-guidance",
-    "note": "AML/CTF programs, customer due diligence, reporting and record keeping.",
-    "topics": ["aml-privacy-tax"]
+    "note": "AML/CTF programs and customer due diligence. Reporting and record keeping.",
+    "topics": [
+      "aml-privacy-tax"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "OAIC: Australian Privacy Principles",
     "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles",
-    "note": "The 13 APPs in Schedule 1 of the Privacy Act, plus notifiable data breaches.",
-    "topics": ["aml-privacy-tax"]
+    "note": "The 13 APPs in Schedule 1 of the Privacy Act. Plus notifiable data breaches.",
+    "topics": [
+      "aml-privacy-tax"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "Tax Practitioners Board: Tax (financial) advice services",
     "url": "https://www.tpb.gov.au/tax-financial-advice-services",
     "note": "What a tax (financial) advice service is and who can provide one.",
-    "topics": ["aml-privacy-tax"]
+    "topics": [
+      "aml-privacy-tax"
+    ]
   },
   {
     "group": "Area 1: Regulatory and legal obligations",
     "title": "Tax Agent Services Act 2009",
     "url": "https://www.legislation.gov.au/C2009A00013/latest",
     "note": "Subdivision 50-AA (civil penalties) is the part the exam focuses on.",
-    "topics": ["aml-privacy-tax"]
+    "topics": [
+      "aml-privacy-tax"
+    ]
   },
   {
     "group": "Area 2: Ethics and professional reasoning",
     "title": "Financial Planners and Advisers Code of Ethics 2019",
     "url": "https://www.legislation.gov.au/F2019L00117/latest",
-    "note": "The 5 values and 12 standards, with the explanatory statement.",
-    "topics": ["ethics"]
+    "note": "The 5 values and 12 standards with the explanatory statement.",
+    "topics": [
+      "ethics"
+    ]
   },
   {
     "group": "Area 2: Ethics and professional reasoning",
     "title": "Markkula Center: A framework for ethical decision making",
     "url": "https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/",
-    "note": "The utilitarian, rights, justice, common good and virtue approaches. On ASIC's suggested reading list.",
-    "topics": ["ethics"]
+    "note": "The utilitarian · rights · justice · common good and virtue approaches. On ASIC's suggested reading list.",
+    "topics": [
+      "ethics"
+    ]
   },
   {
     "group": "Area 3: Advice construction",
     "title": "RG 90: Example Statement of Advice, scaled advice for a new client",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-90-example-statement-of-advice-scaled-advice-for-a-new-client/",
-    "note": "A worked example of a clear, scaled SOA.",
-    "topics": ["advice-construction", "disclosure"]
+    "note": "A worked example of a clear scaled SOA.",
+    "topics": [
+      "advice-construction",
+      "disclosure"
+    ]
   },
   {
     "group": "Area 3: Advice construction",
     "title": "RG 244: Giving information, general advice and scaled advice",
     "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-244-giving-information-general-advice-and-scaled-advice/",
     "note": "Worked examples of scaled advice and the line between general and personal advice.",
-    "topics": ["advice-construction", "best-interests"]
+    "topics": [
+      "advice-construction",
+      "best-interests"
+    ]
   },
   {
     "group": "Area 3: Advice construction",
     "title": "INFO 266: Records of Advice (ROAs)",
     "url": "https://asic.gov.au/regulatory-resources/financial-services/giving-financial-product-advice/faqs-records-of-advice-roas/",
     "note": "When an ROA can be used instead of an SOA.",
-    "topics": ["disclosure", "advice-construction"]
+    "topics": [
+      "disclosure",
+      "advice-construction"
+    ]
   },
   {
     "group": "Area 3: Advice construction",
     "title": "INFO 267: Tips for giving limited advice",
     "url": "https://asic.gov.au/regulatory-resources/financial-services/giving-financial-product-advice/tips-for-giving-limited-advice/",
     "note": "Practical tips and an example limited-advice SOA.",
-    "topics": ["advice-construction"]
+    "topics": [
+      "advice-construction"
+    ]
   },
   {
     "group": "Professional bodies and complaints",
     "title": "Financial Advice Association Australia (FAAA)",
     "url": "https://faaa.au",
-    "note": "Professional association: CPD, events and member resources. A course approved by a professional association for a designation or accreditation is one of the kinds of PY structured training."
+    "note": "Professional association for CPD and events and member resources. A course it approves for a designation or accreditation counts as one kind of PY structured training."
   },
   {
     "group": "Professional bodies and complaints",
     "title": "Australian Financial Complaints Authority (AFCA)",
     "url": "https://www.afca.org.au",
     "note": "The external dispute resolution scheme. Its published determinations are useful case studies.",
-    "topics": ["licensing"]
+    "topics": [
+      "licensing"
+    ]
   },
   {
     "group": "Professional bodies and complaints",
     "title": "Moneysmart",
     "url": "https://moneysmart.gov.au",
     "note": "ASIC's consumer site. Good for explaining concepts to clients in plain English.",
-    "topics": ["behavioural-finance"]
+    "topics": [
+      "behavioural-finance"
+    ]
   }
 ]

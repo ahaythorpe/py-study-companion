@@ -1,0 +1,47 @@
+[
+  { "id": "lic-obligations", "topic": "licensing", "label": "Chapter 7 and general licensee obligations" },
+  { "id": "lic-breach", "topic": "licensing", "label": "Breach reporting" },
+  { "id": "lic-terms", "topic": "licensing", "label": "Restricted terms: 'independent' and 'financial adviser'" },
+  { "id": "lic-standards", "topic": "licensing", "label": "Professional standards for relevant providers" },
+  { "id": "lic-afca", "topic": "licensing", "label": "Dispute resolution and AFCA" },
+
+  { "id": "dis-soa", "topic": "disclosure", "label": "Statement of Advice: content and timing" },
+  { "id": "dis-roa", "topic": "disclosure", "label": "Record of Advice" },
+  { "id": "dis-general-personal", "topic": "disclosure", "label": "General versus personal advice and the general advice warning" },
+  { "id": "dis-fsg", "topic": "disclosure", "label": "Financial Services Guide" },
+  { "id": "dis-cooling-off", "topic": "disclosure", "label": "Cooling-off periods" },
+
+  { "id": "rem-conflicted", "topic": "remuneration", "label": "Conflicted remuneration" },
+  { "id": "rem-life-risk", "topic": "remuneration", "label": "Life risk insurance commissions" },
+  { "id": "rem-borrowed", "topic": "remuneration", "label": "Asset-based fees on borrowed amounts" },
+  { "id": "rem-ofa", "topic": "remuneration", "label": "Ongoing fee arrangements and consent" },
+
+  { "id": "apt-cdd", "topic": "aml-privacy-tax", "label": "AML/CTF customer due diligence" },
+  { "id": "apt-tipping-off", "topic": "aml-privacy-tax", "label": "Suspicious matter reports and tipping off" },
+  { "id": "apt-privacy", "topic": "aml-privacy-tax", "label": "Privacy: APPs and notifiable data breaches" },
+  { "id": "apt-tax", "topic": "aml-privacy-tax", "label": "Tax (financial) advice services" },
+
+  { "id": "bid-duty", "topic": "best-interests", "label": "The best interests duty and appropriate advice" },
+  { "id": "bid-safe-harbour", "topic": "best-interests", "label": "The safe harbour steps" },
+  { "id": "bid-warning", "topic": "best-interests", "label": "Advice on incomplete or inaccurate information" },
+  { "id": "bid-priority", "topic": "best-interests", "label": "The priority rule" },
+
+  { "id": "eth-structure", "topic": "ethics", "label": "The Code's values and standards" },
+  { "id": "eth-conflicts", "topic": "ethics", "label": "Conflicts of interest (Standard 3)" },
+  { "id": "eth-consent-fees", "topic": "ethics", "label": "Consent and fees (Standards 4 and 7)" },
+  { "id": "eth-client-care", "topic": "ethics", "label": "Client care: understanding and broad effects (Standards 5 and 6)" },
+  { "id": "eth-above-law", "topic": "ethics", "label": "Lawful but not ethical" },
+  { "id": "eth-records", "topic": "ethics", "label": "Client records (Standard 8)" },
+  { "id": "eth-frameworks", "topic": "ethics", "label": "Ethical frameworks" },
+
+  { "id": "adv-scaled", "topic": "advice-construction", "label": "Scaled (limited) advice" },
+  { "id": "adv-suitability", "topic": "advice-construction", "label": "Advice suitable for the client's circumstances" },
+  { "id": "adv-sequencing", "topic": "advice-construction", "label": "Sequencing risk" },
+  { "id": "adv-risk-profile", "topic": "advice-construction", "label": "Risk tolerance and risk capacity" },
+
+  { "id": "bf-loss-aversion", "topic": "behavioural-finance", "label": "Loss aversion" },
+  { "id": "bf-anchoring-framing", "topic": "behavioural-finance", "label": "Anchoring and framing" },
+  { "id": "bf-mental-accounting", "topic": "behavioural-finance", "label": "Mental accounting and present bias" },
+  { "id": "bf-social-overconfidence", "topic": "behavioural-finance", "label": "Herding and overconfidence" },
+  { "id": "bf-adviser-bias", "topic": "behavioural-finance", "label": "Biases in advisers" }
+]

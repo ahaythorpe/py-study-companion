@@ -35,6 +35,7 @@ The exam uses multiple choice (4 options) and true/false questions, so the bank 
 {
   "id": "bid-001",
   "topic": "best-interests",
+  "principle": "bid-duty",
   "kind": "mcq",
   "prompt": "Which section of the Corporations Act sets out the duty to act in the client's best interests?",
   "options": ["s961B", "s961J", "s946A", "s912A"],
@@ -44,19 +45,41 @@ The exam uses multiple choice (4 options) and true/false questions, so the bank 
 }
 ```
 
-**Flashcard**
+**Written answer (flashcard)**
+
+There's no single right sentence. List the 2–5 ideas any correct answer must contain as `keyPoints`; you tick them off after writing your own answer. `angle` is `define`, `scenario`, `compare` or `client` (explain it to a client in plain English).
 
 ```json
 {
   "id": "bid-002",
   "topic": "best-interests",
+  "principle": "bid-priority",
   "kind": "flashcard",
+  "angle": "define",
   "prompt": "What does the priority rule require?",
   "answer": "If the adviser knows, or reasonably should know, there is a conflict between the client's interests and their own (or their licensee's or associates'), they must give priority to the client's interests.",
+  "keyPoints": [
+    "There is a conflict between the client's interests and those of the adviser, licensee or their associates",
+    "The adviser knows, or reasonably ought to know, about the conflict",
+    "The adviser must give priority to the client's interests"
+  ],
   "explanation": "This sits alongside the best interests duty and the appropriate advice requirement.",
   "source": "Corps Act s961J"
 }
 ```
+
+**Several true/false statements (`multitf`)**: like the exam, all must be right for the mark. 3–4 `statements`, each `{ "text", "answer": true | false }`.
+
+**Spot the problem (`spot`)**: a document extract as `lines`. Give each problem line an `issue` saying what's wrong and why; leave fine lines without one. Include at least one fine line.
+
+**Optional on any question**
+
+- `scenario`: facts shown above the prompt.
+- `extract`: `{ "cite", "text" }`, the law quoted in the question, as the exam does. Copy it word for word from the current compilation on legislation.gov.au.
+
+## Principles
+
+Every question has a `principle` from `data/principles.json`. Write several versions of each principle in different formats and angles. The app asks each principle once per session, rotating the version, and a principle only counts as mastered when every version is answered right. That way you're tested on the idea, not on one wording.
 
 ## Quality check before committing
 

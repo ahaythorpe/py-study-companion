@@ -16,6 +16,7 @@ Most study tools treat every question equally. This one keeps a score for each t
 - Flashcard mode: flip the card, then mark "got it" or "missed it"
 - Weak-topic tracking: Leitner boxes, plus a flag on any topic under 70% accuracy
 - Progress saved in your browser, so there's no login
+- PY training log: record structured training hours against the 70 h technical / 30 h client care targets, and download a CSV for your supervisor
 - Reading log: track books, articles, courses and podcasts, with status, topic, hours (for CPD) and notes
 - Resources: links to the FAAA, the Corporations Act, the Code of Ethics, ASIC regulatory guides and AFCA
 

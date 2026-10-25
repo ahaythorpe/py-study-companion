@@ -35,6 +35,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link href="/" className="hover:text-accent">
                 Study
               </Link>
+              <Link href="/training" className="hover:text-accent">
+                PY training
+              </Link>
               <Link href="/reading" className="hover:text-accent">
                 Reading log
               </Link>

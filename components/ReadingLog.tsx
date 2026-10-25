@@ -13,9 +13,7 @@ import {
   type ReadingStatus,
 } from "@/lib/reading";
 import { TOPICS, type Topic } from "@/lib/types";
-
-const field =
-  "w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm focus:border-accent focus:outline-none";
+import { field } from "./ui";
 
 export function ReadingLog() {
   const items = useReading();

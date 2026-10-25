@@ -1,5 +1,5 @@
 [
-  { "title": "Corporations Act Chapter 7 (Parts 7.1, 7.6–7.10A) and Chapter 9 (Parts 9.4, 9.4B)", "author": "Legislation", "kind": "guidance", "topic": "licensing" },
+  { "title": "Corporations Act Chapter 7 (Parts 7.1 and 7.6 to 7.10A) and Chapter 9 (Parts 9.4, 9.4B)", "author": "Legislation", "kind": "guidance", "topic": "licensing" },
   { "title": "AML/CTF Act: AUSTRAC guidance on programs, customer identification, reporting and record keeping", "author": "AUSTRAC", "kind": "guidance", "topic": "aml-privacy-tax" },
   { "title": "Privacy Act: Parts II, III, IIIC, VIA, VIB and the Australian Privacy Principles", "author": "Legislation", "kind": "guidance", "topic": "aml-privacy-tax" },
   { "title": "What is a tax (financial) advice service? Information Sheet 20/2014", "author": "Tax Practitioners Board", "kind": "guidance", "topic": "aml-privacy-tax" },
@@ -26,5 +26,9 @@
   { "title": "RG 121 Doing financial services business in Australia", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" },
   { "title": "RG 244 Giving information, general advice and scaled advice", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" },
   { "title": "INFO 266 FAQs: Records of Advice (ROAs)", "author": "ASIC", "kind": "guidance", "topic": "disclosure" },
-  { "title": "INFO 267 Tips for giving limited advice (and example limited-advice SOA)", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" }
+  { "title": "INFO 267 Tips for giving limited advice (and example limited-advice SOA)", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" },
+  { "title": "Financial Planners & Advisers Code of Ethics 2019 guide", "author": "FASEA (via TROVE)", "kind": "guidance", "topic": "ethics" },
+  { "title": "ASIC guidance on financial advice", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" },
+  { "title": "Fines and penalties", "author": "ASIC", "kind": "guidance", "topic": "licensing" },
+  { "title": "Attachment to INFO 267: Example Statement of Advice, limited advice", "author": "ASIC", "kind": "guidance", "topic": "advice-construction" }
 ]

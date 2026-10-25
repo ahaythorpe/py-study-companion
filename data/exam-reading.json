@@ -1,0 +1,239 @@
+[
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Corporations Act 2001, Chapter 7, Part 7.6 (Divs 1, 3, 5, 6, 8, 8A, 8B, 8C, 10)",
+    "focus": "Licensee obligations (s912A), breach reporting (s912DAA to s912DAB), authorised representatives and licensee liability for them, banning, professional standards and registration of relevant providers, and restricted terms such as 'independent' and 'financial adviser'.",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Corporations Act 2001, Chapter 7, Parts 7.7 and 7.7A",
+    "focus": "FSG, SOA and ROA requirements; the best interests duty, safe harbour, appropriate advice, warnings and priority rule; ongoing fee arrangements and consents; conflicted and other banned remuneration.",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Corporations Act 2001, Chapter 7, Parts 7.1, 7.8 and 7.8A (Div 3)",
+    "focus": "Key definitions (financial product, financial product advice, general versus personal advice, retail client); client money and property; insurance and margin lending rules; distribution obligations under design and distribution (DDO).",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Corporations Act 2001, Chapter 7, Parts 7.9, 7.10 and 7.10A",
+    "focus": "PDS obligations, advertising, cooling-off periods, unsolicited off-market offers, market misconduct (including misleading or deceptive conduct) and AFCA.",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Corporations Act 2001, Chapter 9, Parts 9.4 and 9.4B (Div 1)",
+    "focus": "Offences, and the civil consequences of breaching civil penalty provisions: declarations, pecuniary penalties, relinquishment, refund and compensation orders. Useful for 'what are the consequences' questions.",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "ASIC Corporations (Life Insurance Commissions) Instrument 2017/510",
+    "focus": "Commission caps (60% upfront, 20% ongoing, excluding GST) and the two-year clawback."
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "AUSTRAC guidance on the AML/CTF Act",
+    "focus": "AML/CTF programs, customer due diligence (identification and verification), reporting (SMRs, TTRs, IFTIs), record keeping, exemptions and the consequences of non-compliance. Note the reforms that commenced on 31 March 2025 and 31 March 2026.",
+    "url": "https://www.austrac.gov.au/business/core-guidance"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "Privacy Act 1988: Parts II, III, IIIC, VIA, VIB and Schedule 1 (APPs)",
+    "focus": "The 13 Australian Privacy Principles, notifiable data breaches, handling information in emergencies, and enforcement.",
+    "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "What is a tax (financial) advice service? (TPB Information Sheet 20/2014)",
+    "focus": "When financial advice is also tax advice. Read alongside INFO 268 and TASA Subdivision 50-AA, the civil penalty provisions the exam tests.",
+    "url": "https://www.tpb.gov.au/tax-financial-advice-services"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 36: Licensing, financial product advice and dealing",
+    "focus": "What counts as financial product advice, and the line between general and personal advice.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-36-licensing-financial-product-advice-and-dealing/"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 78: Breach reporting by AFS licensees and credit licensees",
+    "focus": "What is a reportable situation, deemed significant breaches, the 30-day deadline and reporting about other licensees' advisers.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-78-breach-reporting-by-afs-licensees-and-credit-licensees/"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 148: Platforms that are managed investment schemes and nominee and custody services",
+    "focus": "How platforms and custody services work and who holds the client's assets."
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 175: Financial product advisers, conduct and disclosure",
+    "focus": "ASIC's main guide to the best interests duty and the FSG, SOA and ROA rules, with worked examples. Read it with Parts 7.7 and 7.7A open.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-175-licensing-financial-product-advisers-conduct-and-disclosure/"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 179: Managed discretionary accounts",
+    "focus": "When an MDA service is offered and the extra obligations that come with it."
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "RG 246: Conflicted and other banned remuneration",
+    "focus": "The 'could reasonably be expected to influence' test, the exceptions (including life risk insurance) and volume-based payments.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-246-conflicted-and-other-banned-remuneration/"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "INFO 268, INFO 286, INFO 287 and INFO 167",
+    "focus": "Tax (financial) advice by relevant providers; ongoing fee arrangements and annual consent (window opens 60 days before and closes 150 days after the reference day); non-ongoing fee consents; and options when unhappy with an AFCA decision.",
+    "url": "https://www.asic.gov.au/regulatory-resources/financial-services/giving-financial-product-advice/fees/faqs-ongoing-fee-arrangements-and-consents"
+  },
+  {
+    "area": "regulatory",
+    "tier": "suggested",
+    "title": "ASIC Corporations (Disclosure of Lack of Independence) Instrument 2021/125",
+    "focus": "How a provider who isn't independent under s923A must say so in the FSG."
+  },
+  {
+    "area": "regulatory",
+    "tier": "extension",
+    "title": "AML/CTF Act 2006 and AML/CTF Rules",
+    "focus": "The full text behind AUSTRAC's guidance."
+  },
+  {
+    "area": "regulatory",
+    "tier": "extension",
+    "title": "Tax Agent Services Act 2009",
+    "focus": "The whole Act, beyond Subdivision 50-AA.",
+    "url": "https://www.legislation.gov.au/C2009A00013/latest"
+  },
+  {
+    "area": "regulatory",
+    "tier": "extension",
+    "title": "Hayne Royal Commission Final Report (2019): Volume 1 recommendations and Volume 2 case studies",
+    "focus": "The case studies are a source of realistic exam-style scenarios."
+  },
+  {
+    "area": "regulatory",
+    "tier": "extension",
+    "title": "Financial Sector Reform (Hayne Royal Commission Response No. 2) Act 2021",
+    "focus": "The source of the 2021 breach reporting, ongoing fee and hawking changes."
+  },
+  {
+    "area": "regulatory",
+    "tier": "extension",
+    "title": "Texts: Australian Master Financial Planning Guide (CCH); Black & Hanrahan, Securities and financial services law; Herzberg, Lipton & Welsh, Understanding company law",
+    "focus": "Reference books for when the legislation and guides aren't enough."
+  },
+  {
+    "area": "ethics",
+    "tier": "suggested",
+    "title": "Financial Planners and Advisers Code of Ethics 2019 and explanatory statement",
+    "focus": "The 5 values and 12 standards. Know what each standard requires well enough to apply it, because the exam quotes the text and asks you to apply it.",
+    "url": "https://www.legislation.gov.au/F2019L00117/latest"
+  },
+  {
+    "area": "ethics",
+    "tier": "suggested",
+    "title": "FASEA Guidance FG002 and the Code of Ethics 2019 guide (via TROVE)",
+    "focus": "FASEA's worked examples of each standard. FASEA has closed, so find these archived on TROVE."
+  },
+  {
+    "area": "ethics",
+    "tier": "suggested",
+    "title": "CPD Standard, Professional Year Standard and Provisional Relevant Providers (Expressions) Determinations (2018)",
+    "focus": "CPD hours and categories, PY structure, and how provisional advisers must describe themselves.",
+    "url": "https://www.legislation.gov.au/F2018L01804/latest"
+  },
+  {
+    "area": "ethics",
+    "tier": "suggested",
+    "title": "Pompian (2012), Behavioural finance and investor types",
+    "focus": "Investor types and the biases behind them. The exam looks for biases in advisers as well as clients."
+  },
+  {
+    "area": "ethics",
+    "tier": "suggested",
+    "title": "Markkula Center: A framework for ethical decision making",
+    "focus": "The utilitarian, rights, justice, common good and virtue approaches. Practise applying several of them to the same dilemma.",
+    "url": "https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/"
+  },
+  {
+    "area": "ethics",
+    "tier": "extension",
+    "title": "Financial Planning Research Journal, vol. 5(1), 2019",
+    "focus": "A special issue on ethics in financial planning."
+  },
+  {
+    "area": "ethics",
+    "tier": "extension",
+    "title": "Markkula Center: Ethical decision making; Ethics Unwrapped: Moral reasoning (UT Austin)",
+    "focus": "Short videos and readings on ethical reasoning.",
+    "url": "https://ethicsunwrapped.utexas.edu"
+  },
+  {
+    "area": "construction",
+    "tier": "suggested",
+    "title": "RG 90: Example Statement of Advice, scaled advice for a new client",
+    "focus": "What a clear, compliant SOA looks like. Exam questions often quote a document like this and ask what's wrong with it.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-90-example-statement-of-advice-scaled-advice-for-a-new-client/"
+  },
+  {
+    "area": "construction",
+    "tier": "suggested",
+    "title": "RG 121: Doing financial services business in Australia",
+    "focus": "An overview of how the regime fits together."
+  },
+  {
+    "area": "construction",
+    "tier": "suggested",
+    "title": "RG 244: Giving information, general advice and scaled advice",
+    "focus": "Worked examples of scaled advice, and when scaling is reasonable.",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-244-giving-information-general-advice-and-scaled-advice/"
+  },
+  {
+    "area": "construction",
+    "tier": "suggested",
+    "title": "INFO 266: Records of Advice and INFO 267: Tips for giving limited advice (with the example limited-advice SOA)",
+    "focus": "When an ROA can be used, and how to keep limited advice compliant.",
+    "url": "https://asic.gov.au/regulatory-resources/financial-services/giving-financial-product-advice/tips-for-giving-limited-advice/"
+  },
+  {
+    "area": "construction",
+    "tier": "extension",
+    "title": "Financial Planning Research Journal articles on client groups",
+    "focus": "Indigenous financial decision-making (Blue & O'Faircheallaigh 2018; Wagland & Taylor 2015), female primary carers in retirement (Craft et al. 2018), baby boomers' equity holdings (West 2017), sequencing risk (Iskra & Smark 2017), risk profiling (Hunt 2016) and leveraged life-cycle investing (Wang et al. 2018)."
+  },
+  {
+    "area": "construction",
+    "tier": "extension",
+    "title": "Behavioural finance books",
+    "focus": "Kahneman, Thinking, fast and slow; Pompian, Behavioural finance and wealth management (2nd edn); Russell (2016, 2019); Plous (1993); Baker & Nofsinger (2010); Forbes (2009); Brocas & Carrillo (2003); Evangelidis (2012)."
+  },
+  {
+    "area": "construction",
+    "tier": "extension",
+    "title": "Research articles",
+    "focus": "Baker et al. (2019) on financial literacy and biases; Barberis & Thaler, A survey of behavioral finance; Foerster et al. (2017), Retail financial advice: Does one size fit all?"
+  }
+]

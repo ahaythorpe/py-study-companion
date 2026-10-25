@@ -2,9 +2,15 @@
   {
     "id": "lic-001",
     "topic": "licensing",
+    "principle": "lic-obligations",
     "kind": "mcq",
     "prompt": "Which section sets out the general obligations of an AFS licensee, such as providing financial services efficiently, honestly and fairly?",
-    "options": ["s912A", "s961B", "s946A", "s1041H"],
+    "options": [
+      "s912A",
+      "s961B",
+      "s946A",
+      "s1041H"
+    ],
     "answerIndex": 0,
     "explanation": "s912A lists the licensee's general obligations. s961B is the best interests duty, s946A requires an SOA, and s1041H prohibits misleading or deceptive conduct in relation to financial products and services.",
     "source": "Corps Act s912A"
@@ -12,24 +18,29 @@
   {
     "id": "lic-002",
     "topic": "licensing",
+    "principle": "lic-breach",
     "kind": "mcq",
     "prompt": "An AFS licensee becomes aware of a reportable situation. Within what period must it generally lodge a report with ASIC?",
     "options": [
-      "30 calendar days after it first knows of, or is reckless about, the reportable situation",
+      "30 days after it first knows, or is reckless with respect to whether, there are reasonable grounds to believe a reportable situation has arisen",
       "10 business days after the breach occurs",
       "At the next annual compliance audit",
       "Only if a client complains"
     ],
     "answerIndex": 0,
-    "explanation": "The breach reporting regime requires a report within 30 calendar days of first knowing (or being reckless about) the reportable situation. The 10 business day test was the pre-2021 regime, and reporting doesn't depend on a complaint.",
+    "explanation": "Since 1 October 2021 the report is due within 30 days after the licensee first knows, or is reckless with respect to whether, there are reasonable grounds to believe a reportable situation has arisen. The 10 business day test was the pre-October 2021 regime, and reporting doesn't depend on a complaint.",
     "source": "Corps Act s912DAA; ASIC RG 78"
   },
   {
     "id": "lic-003",
     "topic": "licensing",
+    "principle": "lic-breach",
     "kind": "truefalse",
     "prompt": "True or false: an AFS licensee can be required to report to ASIC about serious compliance concerns involving an individual adviser authorised by a different licensee.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": "The breach reporting regime includes an obligation to report reasonable grounds to believe another licensee's relevant provider has engaged in certain serious misconduct.",
     "source": "Corps Act s912DAB; ASIC RG 78"
@@ -37,9 +48,15 @@
   {
     "id": "lic-004",
     "topic": "licensing",
+    "principle": "lic-terms",
     "kind": "mcq",
     "prompt": "An adviser receives commissions on the life insurance they recommend. Which word are they restricted from using to describe their business?",
-    "options": ["Independent", "Financial adviser", "Authorised representative", "Relevant provider"],
+    "options": [
+      "Independent",
+      "Financial adviser",
+      "Authorised representative",
+      "Relevant provider"
+    ],
     "answerIndex": 0,
     "explanation": "Using 'independent', 'impartial' or 'unbiased' is restricted where the provider receives commissions, volume-based payments or has certain conflicts. 'Financial adviser' is restricted to registered relevant providers, which this adviser can be.",
     "source": "Corps Act s923A"
@@ -47,18 +64,32 @@
   {
     "id": "lic-005",
     "topic": "licensing",
+    "principle": "lic-standards",
     "kind": "flashcard",
     "prompt": "What professional standards must a relevant provider meet under Part 7.6 Division 8A?",
     "answer": "The education (qualifications) standard, the exam standard, the work and training (professional year) standard, the continuing professional development standard, and compliance with the Code of Ethics.",
+    "keyPoints": [
+      "Qualifications (education) standard: an approved qualification, or the experienced provider pathway",
+      "Exam standard: pass the financial adviser exam",
+      "Work and training standard: complete the professional year",
+      "Continuing professional development (CPD) each year",
+      "Comply with the Code of Ethics"
+    ],
     "explanation": "These are the professional standards for relevant providers. Registration with ASIC sits separately in Division 8C.",
     "source": "Corps Act Part 7.6 Div 8A (s921B, s921E)"
   },
   {
     "id": "lic-006",
     "topic": "licensing",
+    "principle": "lic-obligations",
     "kind": "mcq",
     "prompt": "Which chapter of the Corporations Act 2001 regulates financial services and markets, including financial product advice?",
-    "options": ["Chapter 7", "Chapter 2D", "Chapter 5", "Chapter 6"],
+    "options": [
+      "Chapter 7",
+      "Chapter 2D",
+      "Chapter 5",
+      "Chapter 6"
+    ],
     "answerIndex": 0,
     "explanation": "Chapter 7 covers financial services and markets, including AFS licensing and advice obligations. Chapter 2D covers officers' duties, Chapter 5 external administration and Chapter 6 takeovers.",
     "source": "Corps Act Chapter 7"
@@ -66,19 +97,80 @@
   {
     "id": "lic-007",
     "topic": "licensing",
+    "principle": "lic-afca",
     "kind": "mcq",
     "prompt": "Which body is the external dispute resolution scheme that AFS licensees must belong to for retail client complaints?",
-    "options": ["AFCA", "ASIC", "APRA", "FOS"],
+    "options": [
+      "AFCA",
+      "ASIC",
+      "APRA",
+      "FOS"
+    ],
     "answerIndex": 0,
     "explanation": "The Australian Financial Complaints Authority (AFCA) is the authorised EDR scheme. ASIC is the conduct regulator, APRA the prudential regulator, and FOS was one of the schemes AFCA replaced in 2018.",
     "source": "Corps Act s912A(1)(g), Part 7.10A"
   },
   {
+    "id": "lic-008",
+    "topic": "licensing",
+    "principle": "lic-breach",
+    "kind": "multitf",
+    "scenario": "On 1 March a licensee's compliance team finds that an adviser has been charging fees without valid consent since last year. By 10 March the team has reasonable grounds to believe it's a reportable situation.",
+    "extract": {
+      "cite": "Corporations Act s912DAA(3)",
+      "text": "The report must be lodged with ASIC within 30 days after the financial services licensee first knows that, or is reckless with respect to whether, there are reasonable grounds to believe the reportable situation has arisen."
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "The 30 days runs from when the adviser first charged the fees last year.",
+        "answer": false
+      },
+      {
+        "text": "The 30 days runs from when the licensee first knows, or is reckless with respect to whether, there are reasonable grounds to believe a reportable situation has arisen.",
+        "answer": true
+      },
+      {
+        "text": "If the licensee is aware of a substantial risk that there are reasonable grounds, but doesn't look into it, the clock can still start (recklessness).",
+        "answer": true
+      },
+      {
+        "text": "The licensee only has to report if a client complains to AFCA.",
+        "answer": false
+      }
+    ],
+    "explanation": "The clock is tied to the licensee's knowledge (or recklessness) about reasonable grounds, not to when the conduct happened. Reporting doesn't depend on a complaint. Being reckless means the licensee can't avoid the deadline by not looking.",
+    "source": "Corps Act s912DAA(3); ASIC RG 78"
+  },
+  {
+    "id": "lic-009",
+    "topic": "licensing",
+    "principle": "lic-terms",
+    "kind": "flashcard",
+    "angle": "client",
+    "prompt": "A new client asks why you call yourself a 'financial adviser' but not 'independent'. Explain it to them in plain English.",
+    "answer": "'Financial adviser' is a protected title: only advisers registered with ASIC who meet the professional standards can use it. 'Independent' is protected too. I can't use it because I receive commissions on life insurance, and the law says anyone paid that way, or with certain other benefits or ties to product issuers, can't call themselves independent.",
+    "keyPoints": [
+      "'Financial adviser' is a restricted title for registered relevant providers who meet the professional standards",
+      "'Independent' (and 'impartial', 'unbiased') is also restricted",
+      "It can't be used by someone who receives commissions (not rebated in full), volume-based payments or other benefits that could influence them, or who has certain ties to product issuers",
+      "Links it to the adviser's own situation, e.g. receiving life insurance commissions"
+    ],
+    "explanation": "s923A restricts 'independent', 'impartial' and 'unbiased'. s923C restricts 'financial adviser' and 'financial planner' to relevant providers. Plain-English explanations like this are part of the communication skills the exam tests.",
+    "source": "Corps Act s923A, s923C"
+  },
+  {
     "id": "dis-001",
     "topic": "disclosure",
+    "principle": "dis-soa",
     "kind": "mcq",
     "prompt": "Which section requires a Statement of Advice to be given when personal advice is provided to a retail client?",
-    "options": ["s946A", "s961B", "s949A", "s1012A"],
+    "options": [
+      "s946A",
+      "s961B",
+      "s949A",
+      "s1012A"
+    ],
     "answerIndex": 0,
     "explanation": "s946A is the SOA obligation. s961B is the best interests duty, s949A is the general advice warning and s1012A deals with giving a PDS when recommending a product.",
     "source": "Corps Act s946A"
@@ -86,6 +178,7 @@
   {
     "id": "dis-002",
     "topic": "disclosure",
+    "principle": "dis-roa",
     "kind": "mcq",
     "prompt": "When can a Record of Advice generally be used instead of a full SOA?",
     "options": [
@@ -101,6 +194,7 @@
   {
     "id": "dis-003",
     "topic": "disclosure",
+    "principle": "dis-soa",
     "kind": "mcq",
     "prompt": "Which of these must an SOA include?",
     "options": [
@@ -116,6 +210,7 @@
   {
     "id": "dis-004",
     "topic": "disclosure",
+    "principle": "dis-soa",
     "kind": "mcq",
     "prompt": "When must an SOA generally be given to the client?",
     "options": [
@@ -125,21 +220,28 @@
       "Before the first meeting with the client"
     ],
     "answerIndex": 0,
-    "explanation": "The SOA must reach the client before the advice is acted on. A fixed 30-day window and an on-request rule describe other regimes, and an SOA can't exist before the advice does.",
+    "explanation": "The SOA must be given when the advice is provided or as soon as practicable after, and before any further financial service arising from the advice. There is no 30-day window or on-request rule. The exception is time-critical advice (s946C(3)), where the SOA can follow within 5 business days.",
     "source": "Corps Act s946C"
   },
   {
     "id": "dis-005",
     "topic": "disclosure",
+    "principle": "dis-general-personal",
     "kind": "flashcard",
     "prompt": "What warning must accompany general advice to a retail client?",
     "answer": "That the advice hasn't taken into account the client's objectives, financial situation or needs, and that the client should consider whether it's appropriate for them (and read the PDS if it relates to acquiring a product).",
+    "keyPoints": [
+      "The advice doesn't take into account the client's objectives, financial situation or needs",
+      "The client should consider whether it's appropriate for them before acting",
+      "If it's about acquiring a product, they should get and consider the PDS"
+    ],
     "explanation": "This is the general advice warning. It reminds the client that no one has assessed their personal circumstances.",
     "source": "Corps Act s949A; ASIC RG 244"
   },
   {
     "id": "dis-006",
     "topic": "disclosure",
+    "principle": "dis-general-personal",
     "kind": "mcq",
     "prompt": "What makes financial product advice 'personal advice' rather than general advice?",
     "options": [
@@ -155,6 +257,7 @@
   {
     "id": "dis-007",
     "topic": "disclosure",
+    "principle": "dis-fsg",
     "kind": "mcq",
     "prompt": "Which document tells a retail client about the services offered, how the provider is paid, and how to make a complaint, before a financial service is provided?",
     "options": [
@@ -170,16 +273,119 @@
   {
     "id": "dis-008",
     "topic": "disclosure",
+    "principle": "dis-cooling-off",
     "kind": "truefalse",
     "prompt": "True or false: for many retail financial products, such as life insurance and interests in managed investment schemes, the client has a 14-day cooling-off period.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": "The cooling-off regime gives retail clients 14 days to return many products. Some products are excluded, so check the specific product.",
     "source": "Corps Act s1019B"
   },
   {
+    "id": "dis-009",
+    "topic": "disclosure",
+    "principle": "dis-soa",
+    "kind": "multitf",
+    "scenario": "Over the phone, an adviser gives a long-standing client personal advice to sell a share holding. The client says: 'Sell them right now, before the market opens.' There isn't time to prepare an SOA first.",
+    "extract": {
+      "cite": "Corporations Act s946C(3)",
+      "text": "If:\n(a) the client expressly instructs that they require a further financial service that arises out of, or is connected with, the advice to be provided immediately, or by a specified time; and\n(b) it is not reasonably practicable to give the Statement of Advice to the client before that further service is provided as so instructed;\nthe providing entity must give the client the Statement of Advice:\n(c) unless paragraph (d) applies—within 5 business days after providing that further service, or sooner if practicable; …"
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "Because the client expressly asked for the sale immediately, the adviser can sell before giving the SOA.",
+        "answer": true
+      },
+      {
+        "text": "The SOA must then generally be given within 5 business days after the sale, or sooner if practicable.",
+        "answer": true
+      },
+      {
+        "text": "The adviser no longer needs to give an SOA at all, because the advice was acted on.",
+        "answer": false
+      },
+      {
+        "text": "Without the client's express instruction, the adviser could still sell first and send the SOA within 30 days.",
+        "answer": false
+      }
+    ],
+    "explanation": "The general rule (s946C(1)) is that the SOA comes before any further service arising from the advice. The time-critical exception needs an express client instruction and must be impractical to meet; even then the SOA follows within 5 business days. There is no 30-day rule.",
+    "source": "Corps Act s946C(1), (3)"
+  },
+  {
+    "id": "dis-010",
+    "topic": "disclosure",
+    "principle": "dis-roa",
+    "kind": "flashcard",
+    "angle": "compare",
+    "prompt": "What's the difference between a Statement of Advice and a Record of Advice, and when can a Record of Advice be used instead?",
+    "answer": "An SOA is the full document for personal advice to a retail client: the advice, the basis for it, remuneration and conflicts that could influence it, and any warnings. An ROA is a shorter record that can replace an SOA for further advice, but only where the client already received an SOA and their relevant circumstances and the basis of the advice haven't significantly changed.",
+    "keyPoints": [
+      "An SOA documents personal advice to a retail client, including the advice, its basis, remuneration or conflicts that could influence it, and warnings",
+      "An ROA is a record of further advice used instead of an SOA in limited cases",
+      "An ROA needs an earlier SOA to have been given to the client",
+      "The client's relevant circumstances and the basis of the advice must not be significantly different"
+    ],
+    "explanation": "The ROA exception saves repeating a full SOA when little has changed. It isn't triggered by product count, the channel used or the client waiving the SOA.",
+    "source": "Corps Act s946A, s946B, s947B; ASIC INFO 266"
+  },
+  {
+    "id": "dis-011",
+    "topic": "disclosure",
+    "principle": "dis-soa",
+    "kind": "spot",
+    "scenario": "Extracts from an SOA for Priya, who asked for advice on consolidating her two super accounts.",
+    "prompt": "Tap every line that has a problem.",
+    "lines": [
+      {
+        "text": "Statement of Advice, prepared for Priya Shah."
+      },
+      {
+        "text": "Our advice: roll your two super accounts into Fund X and keep insurance cover equivalent to what you hold now."
+      },
+      {
+        "text": "Why this suits you: Fund X has had strong returns for five years, so you can expect similar returns in future.",
+        "issue": "Presents past performance as a reliable guide to future returns. That's misleading (s1041H, Code Standard 9) and isn't a proper basis for advice."
+      },
+      {
+        "text": "Fees: an advice fee of $2,200 (including GST), which you've agreed to pay."
+      },
+      {
+        "text": "Our practice receives a payment from Fund X for each client we refer. We don't think this affects our advice, so we haven't included the amount.",
+        "issue": "The SOA must disclose remuneration and benefits that might reasonably be expected to influence the advice (s947B(2)(d)), and a per-referral payment from the fund is likely conflicted remuneration (s963A)."
+      },
+      {
+        "text": "You told us you weren't sure of your current insurance details. This advice may be based on incomplete information, so consider whether it's appropriate before acting."
+      }
+    ],
+    "explanation": "The last line is a correct s961H warning, not a problem. The two issues are a misleading basis for the advice and missing (and probably banned) remuneration.",
+    "source": "Corps Act s947B(2), s961H, s963A, s1041H; Code of Ethics Standard 9"
+  },
+  {
+    "id": "dis-012",
+    "topic": "disclosure",
+    "principle": "dis-general-personal",
+    "kind": "mcq",
+    "scenario": "At a public seminar an adviser says, 'Most people in their 40s should think about salary sacrificing into super.' Afterwards an attendee shows him her payslip and asks if she should salary sacrifice $500 a month. He looks at her income and says yes.",
+    "prompt": "How should the two statements be classified?",
+    "options": [
+      "The seminar comment was general advice; the answer to the attendee was personal advice, so personal advice obligations apply to it",
+      "Both were general advice, because no SOA was prepared",
+      "Both were personal advice, because the adviser is a registered relevant provider",
+      "Neither was financial product advice, because no specific fund was named"
+    ],
+    "answerIndex": 0,
+    "explanation": "Advice becomes personal when the provider has considered, or a reasonable person would expect them to have considered, the person's objectives, financial situation or needs. Looking at her payslip does that. Whether an SOA was prepared doesn't change the classification. Advice about super contributions is financial product advice even if no fund is named.",
+    "source": "Corps Act s766B(3), (4); ASIC RG 244"
+  },
+  {
     "id": "rem-001",
     "topic": "remuneration",
+    "principle": "rem-conflicted",
     "kind": "mcq",
     "prompt": "Which of these is most likely to be conflicted remuneration?",
     "options": [
@@ -190,21 +396,30 @@
     ],
     "answerIndex": 0,
     "explanation": "Conflicted remuneration is a benefit that could reasonably be expected to influence the product recommended or the advice given. Volume-based payments from product providers are the classic example; client-paid fees aren't.",
-    "source": "Corps Act s963A; ASIC RG 246"
+    "source": "Corps Act s963A; ASIC RG 246",
+    "extract": {
+      "cite": "Corporations Act s963A(1)",
+      "text": "Conflicted remuneration means any benefit, whether monetary or non‑monetary, given to a financial services licensee, or a representative of a financial services licensee, who provides financial product advice to persons as retail clients that:\n(a) because of the nature of the benefit or the circumstances in which it is given:\n(i) could reasonably be expected to influence the choice of financial product recommended by the licensee or representative to retail clients; or\n(ii) could reasonably be expected to influence the financial product advice given to retail clients by the licensee or representative; and\n(b) is not given to the licensee or representative by a person who is a retail client in relation to a financial product or financial service provided by the licensee or representative to the client."
+    }
   },
   {
     "id": "rem-002",
     "topic": "remuneration",
+    "principle": "rem-life-risk",
     "kind": "truefalse",
     "prompt": "True or false: all commissions on life risk insurance products are banned for financial advisers.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
-    "explanation": "Life risk insurance commissions are an exception to the conflicted remuneration ban, but only within ASIC's caps and clawback rules.",
-    "source": "Corps Act s963B; ASIC Corporations (Life Insurance Commissions) Instrument 2017/510"
+    "explanation": "Life risk insurance commissions are an exception to the conflicted remuneration ban, but only if they're level or meet ASIC's benefit ratio and clawback requirements, and (under s963BB) the client gave informed consent to the commission before the policy was issued.",
+    "source": "Corps Act s963B(1)(b), s963BB; ASIC Corporations (Life Insurance Commissions) Instrument 2017/510"
   },
   {
     "id": "rem-003",
     "topic": "remuneration",
+    "principle": "rem-life-risk",
     "kind": "mcq",
     "prompt": "Under ASIC's life insurance commission rules, what are the maximum upfront and ongoing commission caps?",
     "options": [
@@ -220,15 +435,22 @@
   {
     "id": "rem-004",
     "topic": "remuneration",
+    "principle": "rem-borrowed",
     "kind": "flashcard",
     "prompt": "Can an adviser charge a percentage-based (asset-based) fee on money a client borrowed to invest?",
     "answer": "No. Asset-based fees on borrowed amounts are banned when giving personal advice to retail clients.",
-    "explanation": "This ban stops advisers from benefiting from recommending gearing.",
-    "source": "Corps Act s964D"
+    "keyPoints": [
+      "No, it's banned",
+      "The ban covers asset-based fees on the borrowed amount",
+      "It applies when giving personal advice to retail clients"
+    ],
+    "explanation": "The ban (s964D for licensees, s964E for authorised representatives) stops advisers profiting from recommending gearing. It doesn't apply if it isn't reasonably apparent that the amount was borrowed, but that doesn't reduce the duty to make reasonable inquiries.",
+    "source": "Corps Act s964D, s964E"
   },
   {
     "id": "rem-005",
     "topic": "remuneration",
+    "principle": "rem-ofa",
     "kind": "mcq",
     "prompt": "A client has an ongoing fee arrangement. What does the law require for it to keep running each year?",
     "options": [
@@ -242,8 +464,79 @@
     "source": "Corps Act Part 7.7A Div 3; ASIC INFO 286"
   },
   {
+    "id": "rem-006",
+    "topic": "remuneration",
+    "principle": "rem-life-risk",
+    "kind": "multitf",
+    "scenario": "An adviser recommends a retail life insurance policy (not held through super) and will receive an upfront commission from the insurer.",
+    "extract": {
+      "cite": "Corporations Act s963BB(1) (extract)",
+      "text": "… paragraphs 963B(1)(a), (b) and (ba) do not apply to a monetary benefit given in connection with the issue or sale of the relevant product to the client unless:\n(b) before the issue or sale of the relevant product, the client consented to the monetary benefit being given; and\n(c) before the consent was given, the following information was disclosed to the client: …\n(iii) for a life risk insurance product or consumer credit insurance—the rate of the monetary benefit, expressed as a percentage of the policy cost payable for the product; …\n(vii) the fact that the consent is irrevocable; …"
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "The commission is only exempt from the ban if it is level, or meets ASIC's benefit ratio and clawback requirements.",
+        "answer": true
+      },
+      {
+        "text": "Before the policy is issued, the client must consent to the commission after being told its rate as a percentage of the policy cost.",
+        "answer": true
+      },
+      {
+        "text": "The client can withdraw that consent at any time and stop the commission.",
+        "answer": false
+      },
+      {
+        "text": "Disclosing the commission in the SOA is enough on its own.",
+        "answer": false
+      }
+    ],
+    "explanation": "Life risk commissions are only permitted within the benefit ratio and clawback rules (Instrument 2017/510) or as level commission, and since the DBFO reforms only with the client's prior informed consent. That consent is irrevocable, and SOA disclosure alone doesn't replace it.",
+    "source": "Corps Act s963B(1)(b), s963BB; ASIC Corporations (Life Insurance Commissions) Instrument 2017/510"
+  },
+  {
+    "id": "rem-007",
+    "topic": "remuneration",
+    "principle": "rem-conflicted",
+    "kind": "flashcard",
+    "angle": "compare",
+    "prompt": "Why is a volume-based bonus from a product issuer conflicted remuneration, when an advice fee the client pays you isn't?",
+    "answer": "Conflicted remuneration is a benefit that could reasonably be expected to influence which product you recommend or the advice you give. A volume bonus rewards putting more client money into that product, so it could. The definition excludes benefits given by the retail client themselves, so client-paid fees aren't conflicted remuneration, though they still need consent and must be fair and reasonable.",
+    "keyPoints": [
+      "Conflicted remuneration is a benefit that could reasonably be expected to influence the product recommended or the advice given",
+      "A volume bonus rewards placing more money in a product, so it could influence the recommendation",
+      "Benefits given by the retail client are excluded from the definition",
+      "Client-paid fees still need proper consent and must be fair, reasonable and value for money"
+    ],
+    "explanation": "The test in s963A is about the nature of the benefit and who gives it. Code Standard 7 still applies to client-paid fees.",
+    "source": "Corps Act s963A; Code of Ethics Standard 7"
+  },
+  {
+    "id": "rem-008",
+    "topic": "remuneration",
+    "principle": "rem-borrowed",
+    "kind": "mcq",
+    "scenario": "A client tells her adviser she's taking out a $200,000 margin loan to add to her $300,000 portfolio. The adviser's agreement charges 1% a year of the total portfolio value.",
+    "extract": {
+      "cite": "Corporations Act s964D(1), (3)",
+      "text": "(1) The financial services licensee must not charge an asset‑based fee on a borrowed amount used or to be used to acquire financial products by or on behalf of the client.\n(3) Subsections (1) and (2) do not apply in relation to a borrowed amount if it is not reasonably apparent that the amount has been borrowed."
+    },
+    "prompt": "Which statement is correct?",
+    "options": [
+      "The 1% fee can't be charged on the $200,000 that was borrowed",
+      "The fee is fine as long as it's disclosed in the SOA",
+      "The fee is fine if the client consents to it in writing",
+      "The ban applies to licensees but not to authorised representatives"
+    ],
+    "answerIndex": 0,
+    "explanation": "The client told the adviser about the loan, so it's reasonably apparent the money is borrowed and the exception in s964D(3) doesn't help. Disclosure and consent don't cure a banned fee, and s964E applies the same ban to authorised representatives.",
+    "source": "Corps Act s964D, s964E"
+  },
+  {
     "id": "apt-001",
     "topic": "aml-privacy-tax",
+    "principle": "apt-cdd",
     "kind": "mcq",
     "prompt": "Before a reporting entity provides a designated service to a new customer, what does the AML/CTF Act generally require?",
     "options": [
@@ -253,12 +546,13 @@
       "Collecting the customer's tax file number"
     ],
     "answerIndex": 0,
-    "explanation": "Identifying and verifying the customer comes before the designated service. Threshold transaction reports relate to cash transactions of $10,000 or more, and credit checks and TFNs aren't AML/CTF requirements.",
+    "explanation": "The customer must be identified and their identity verified before the designated service is provided. From 31 March 2026 the Act calls this initial customer due diligence (it was the applicable customer identification procedure). Threshold transaction reports relate to physical cash of $10,000 or more, and credit checks and TFNs aren't AML/CTF requirements.",
     "source": "AML/CTF Act Part 2; AUSTRAC guidance"
   },
   {
     "id": "apt-002",
     "topic": "aml-privacy-tax",
+    "principle": "apt-tipping-off",
     "kind": "mcq",
     "prompt": "An adviser's licensee has lodged a suspicious matter report about a client. The client asks if anything is wrong. What must the adviser not do?",
     "options": [
@@ -268,15 +562,21 @@
       "Answer general questions about the client's portfolio"
     ],
     "answerIndex": 0,
-    "explanation": "The 'tipping off' offence prohibits disclosing that a suspicious matter report has been made or that information has been given to AUSTRAC.",
+    "explanation": "Since 31 March 2025 the tipping off offence prohibits disclosing SMR information where the disclosure would or could reasonably be expected to prejudice an investigation. Telling the client an SMR was lodged is the classic example. Keeping records, talking to your AML/CTF compliance officer and normal portfolio service are fine.",
     "source": "AML/CTF Act s123"
   },
   {
     "id": "apt-003",
     "topic": "aml-privacy-tax",
+    "principle": "apt-privacy",
     "kind": "mcq",
     "prompt": "Which Australian Privacy Principle requires an entity to take reasonable steps to protect personal information from misuse, loss and unauthorised access?",
-    "options": ["APP 11", "APP 1", "APP 6", "APP 12"],
+    "options": [
+      "APP 11",
+      "APP 1",
+      "APP 6",
+      "APP 12"
+    ],
     "answerIndex": 0,
     "explanation": "APP 11 is security of personal information. APP 1 is open and transparent management, APP 6 is use or disclosure, and APP 12 is access to personal information.",
     "source": "Privacy Act Schedule 1 (APP 11)"
@@ -284,9 +584,13 @@
   {
     "id": "apt-004",
     "topic": "aml-privacy-tax",
+    "principle": "apt-privacy",
     "kind": "truefalse",
     "prompt": "True or false: if an eligible data breach occurs, the entity must notify the individuals at risk of serious harm and the OAIC.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": "The Notifiable Data Breaches scheme requires notifying affected individuals and the Office of the Australian Information Commissioner.",
     "source": "Privacy Act Part IIIC"
@@ -294,18 +598,96 @@
   {
     "id": "apt-005",
     "topic": "aml-privacy-tax",
+    "principle": "apt-tax",
     "kind": "flashcard",
     "prompt": "What is a tax (financial) advice service?",
     "answer": "Tax advice given in the course of financial advice of a kind usually given by a financial services licensee or relevant provider, which the client can reasonably be expected to rely on for tax purposes, e.g. the tax consequences of a recommended strategy.",
+    "keyPoints": [
+      "Tax advice given as part of financial advice of a kind a licensee or relevant provider usually gives",
+      "It's about the client's liabilities, obligations or entitlements under a tax law",
+      "The client can reasonably be expected to rely on it for tax purposes"
+    ],
     "explanation": "Relevant providers who give these services must meet the TASA requirements. Subdivision 50-AA sets out civil penalties for breaches.",
     "source": "TASA s90-15, Subdiv 50-AA; TPB Information Sheet 20/2014; ASIC INFO 268"
   },
   {
+    "id": "apt-006",
+    "topic": "aml-privacy-tax",
+    "principle": "apt-tipping-off",
+    "kind": "multitf",
+    "scenario": "A licensee has lodged a suspicious matter report about a client's unusual cash deposits. The client rings the adviser to ask about their portfolio.",
+    "extract": {
+      "cite": "AML/CTF Act s123(1)(b) to (d) (extract)",
+      "text": "(b) the person discloses information to another person (other than an AUSTRAC entrusted person); and\n(c) the information is covered by subsection (2); and\n(d) the disclosure of the information would or could reasonably be expected to prejudice an investigation: …"
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "Telling the client 'we've had to report you to AUSTRAC' could be an offence.",
+        "answer": true
+      },
+      {
+        "text": "Discussing the report with an AUSTRAC entrusted person is not tipping off.",
+        "answer": true
+      },
+      {
+        "text": "The adviser must refuse to discuss the client's portfolio at all.",
+        "answer": false
+      },
+      {
+        "text": "The test is whether the disclosure would or could reasonably be expected to prejudice an investigation.",
+        "answer": true
+      }
+    ],
+    "explanation": "Since 31 March 2025 the offence turns on whether disclosing SMR information would or could reasonably be expected to prejudice an investigation. Normal service can continue. Disclosures to AUSTRAC entrusted persons are carved out.",
+    "source": "AML/CTF Act s123"
+  },
+  {
+    "id": "apt-007",
+    "topic": "aml-privacy-tax",
+    "principle": "apt-privacy",
+    "kind": "flashcard",
+    "angle": "scenario",
+    "prompt": "So staff can work from home, your practice emails unencrypted client fact finds to staff's personal Gmail accounts. Which privacy obligation does this engage, and what should change?",
+    "answer": "APP 11: the practice must take reasonable steps to protect personal information from misuse, interference and loss, and from unauthorised access, modification or disclosure. Sending fact finds to personal email isn't reasonable. Use secure, practice-controlled systems instead. If information is compromised and serious harm is likely, the notifiable data breaches scheme applies.",
+    "keyPoints": [
+      "APP 11: take reasonable steps to protect the personal information held",
+      "Protection from misuse, interference and loss, and unauthorised access, modification or disclosure",
+      "Change to secure, practice-controlled systems (e.g. encryption, approved platforms) instead of personal email",
+      "If a breach is likely to cause serious harm, the notifiable data breaches scheme applies"
+    ],
+    "explanation": "Fact finds hold sensitive financial and often health information. The standard is what's reasonable in the circumstances, which rises with sensitivity.",
+    "source": "Privacy Act Sch 1 APP 11.1; Part IIIC"
+  },
+  {
+    "id": "apt-008",
+    "topic": "aml-privacy-tax",
+    "principle": "apt-privacy",
+    "kind": "mcq",
+    "scenario": "An adviser's laptop holding unencrypted client files is stolen from her car. The practice assesses that serious harm to the clients is likely and can't be prevented by remedial action.",
+    "prompt": "What must the practice do?",
+    "options": [
+      "Notify the affected individuals and the OAIC as soon as practicable",
+      "Notify only its professional indemnity insurer",
+      "Nothing, because a third party committed the crime",
+      "Notify clients only if they ask what happened"
+    ],
+    "answerIndex": 0,
+    "explanation": "This is an eligible data breach: unauthorised access is likely to result in serious harm and remedial action can't prevent it. The entity must prepare a statement for the Commissioner and notify affected individuals as soon as practicable. Who caused the breach doesn't matter.",
+    "source": "Privacy Act Part IIIC (s26WE, s26WK, s26WL)"
+  },
+  {
     "id": "bid-001",
     "topic": "best-interests",
+    "principle": "bid-duty",
     "kind": "mcq",
     "prompt": "Which section of the Corporations Act sets out the duty to act in the client's best interests?",
-    "options": ["s961B", "s961J", "s946A", "s912A"],
+    "options": [
+      "s961B",
+      "s961J",
+      "s946A",
+      "s912A"
+    ],
     "answerIndex": 0,
     "explanation": "s961B is the best interests duty. s961J is the priority rule, s946A relates to SOAs and s912A sets general licensee obligations.",
     "source": "Corps Act s961B"
@@ -313,18 +695,30 @@
   {
     "id": "bid-002",
     "topic": "best-interests",
+    "principle": "bid-priority",
     "kind": "flashcard",
     "prompt": "What does the priority rule require?",
     "answer": "If the adviser knows, or reasonably should know, there is a conflict between the client's interests and their own (or their licensee's or associates'), they must give priority to the client's interests.",
+    "keyPoints": [
+      "There is a conflict between the client's interests and those of the adviser, licensee or their associates",
+      "The adviser knows, or reasonably ought to know, about the conflict",
+      "The adviser must give priority to the client's interests"
+    ],
     "explanation": "This sits alongside the best interests duty and the appropriate advice requirement.",
     "source": "Corps Act s961J"
   },
   {
     "id": "bid-003",
     "topic": "best-interests",
+    "principle": "bid-duty",
     "kind": "mcq",
     "prompt": "Which section requires that the advice itself be appropriate to the client, had the best interests duty been met?",
-    "options": ["s961G", "s961B", "s961H", "s961J"],
+    "options": [
+      "s961G",
+      "s961B",
+      "s961H",
+      "s961J"
+    ],
     "answerIndex": 0,
     "explanation": "s961G is the appropriate advice requirement. s961B is the best interests duty, s961H covers warnings where advice relies on incomplete or inaccurate information, and s961J is the priority rule.",
     "source": "Corps Act s961G"
@@ -332,6 +726,7 @@
   {
     "id": "bid-004",
     "topic": "best-interests",
+    "principle": "bid-safe-harbour",
     "kind": "mcq",
     "prompt": "Which of these is a step in the 'safe harbour' for the best interests duty?",
     "options": [
@@ -347,8 +742,9 @@
   {
     "id": "bid-005",
     "topic": "best-interests",
+    "principle": "bid-warning",
     "kind": "mcq",
-    "prompt": "An adviser reasonably considers that the client's information is incomplete or inaccurate. What must they do?",
+    "prompt": "While giving personal advice, it is reasonably apparent to the adviser that the client's information about their circumstances is incomplete or inaccurate. What must they do?",
     "options": [
       "Warn the client that the advice is based on incomplete or inaccurate information, and that they should consider its appropriateness",
       "Refuse to give any advice until the information is complete",
@@ -357,11 +753,16 @@
     ],
     "answerIndex": 0,
     "explanation": "s961H requires a warning, not a refusal. The ROA option confuses disclosure documents, and there is no ASIC notification requirement here.",
-    "source": "Corps Act s961H"
+    "source": "Corps Act s961H",
+    "extract": {
+      "cite": "Corporations Act s961H(1) to (2)",
+      "text": "(1) If it is reasonably apparent that information relating to the objectives, financial situation and needs of the client on which the advice is based is incomplete or inaccurate, the provider must, in accordance with subsections (2) and (3), warn the client that:\n(a) the advice is, or may be, based on incomplete or inaccurate information relating to the client’s relevant personal circumstances; and\n(b) because of that, the client should, before acting on the advice, consider the appropriateness of the advice, having regard to the client’s objectives, financial situation and needs.\n(2) The warning must be given to the client at the same time as the advice is provided and, subject to subsection (3), by the same means as the advice is provided."
+    }
   },
   {
     "id": "bid-006",
     "topic": "best-interests",
+    "principle": "bid-priority",
     "kind": "mcq",
     "prompt": "An adviser recommends their licensee's in-house fund because the licensee rewards in-house sales, even though a comparable external fund is cheaper for the client. Which obligation is most directly breached?",
     "options": [
@@ -377,6 +778,7 @@
   {
     "id": "bid-007",
     "topic": "best-interests",
+    "principle": "bid-safe-harbour",
     "kind": "mcq",
     "prompt": "A client asks about a complex aged care strategy that is outside the adviser's expertise. What does the safe harbour expect?",
     "options": [
@@ -390,11 +792,154 @@
     "source": "Corps Act s961B(2); ASIC exam preparation guidance"
   },
   {
+    "id": "bid-008",
+    "topic": "best-interests",
+    "principle": "bid-safe-harbour",
+    "kind": "flashcard",
+    "angle": "scenario",
+    "prompt": "A client asks you only whether to switch super funds. Before recommending a switch, what does the safe harbour require you to do?",
+    "answer": "Identify the objectives, situation and needs she has told me about; identify the subject matter (her super) and her circumstances relevant to it, such as insurance in the current fund; make reasonable inquiries if anything seems incomplete or inaccurate; check I have the expertise, or decline; reasonably investigate and assess suitable funds; and base every judgement on her relevant circumstances, plus any other step reasonably in her best interests.",
+    "keyPoints": [
+      "Identify the objectives, financial situation and needs the client disclosed",
+      "Identify the subject matter sought and the client's relevant circumstances",
+      "Make reasonable inquiries where information is reasonably apparent to be incomplete or inaccurate",
+      "Assess whether you have the expertise, and decline if not",
+      "Reasonably investigate and assess suitable products, basing all judgements on the client's relevant circumstances"
+    ],
+    "explanation": "These map to s961B(2)(a) to (f). Step (g), any other step reasonably regarded as in the client's best interests, sits on top. For a fund switch, loss of insurance and fees are classic relevant circumstances.",
+    "source": "Corps Act s961B(2)"
+  },
+  {
+    "id": "bid-009",
+    "topic": "best-interests",
+    "principle": "bid-safe-harbour",
+    "kind": "mcq",
+    "extract": {
+      "cite": "Corporations Act s961D(1)",
+      "text": "A reasonable investigation into the financial products that might achieve those of the objectives and meet those of the needs of the client that would reasonably be considered relevant to advice on the subject matter sought by the client does not require an investigation into every financial product available."
+    },
+    "prompt": "Which of these is NOT required by the safe harbour in s961B(2)?",
+    "options": [
+      "Investigating every financial product available on the market",
+      "Making reasonable inquiries where information is reasonably apparent to be incomplete or inaccurate",
+      "Assessing whether you have the expertise to advise on the subject matter",
+      "Basing all judgements on the client's relevant circumstances"
+    ],
+    "answerIndex": 0,
+    "explanation": "The investigation must be reasonable, and s961D(1) says that doesn't mean every product available. But if the client asks you to consider a specific product, it must be included (s961D(2)). The other three are safe harbour steps (c), (d) and (f).",
+    "source": "Corps Act s961B(2), s961D"
+  },
+  {
+    "id": "bid-010",
+    "topic": "best-interests",
+    "principle": "bid-warning",
+    "kind": "multitf",
+    "scenario": "A client won't give details of a large loan on an investment property, saying it's 'not relevant'. The adviser goes ahead with advice on super contributions.",
+    "extract": {
+      "cite": "Corporations Act s961H(2), (3), (5)",
+      "text": "(2) The warning must be given to the client at the same time as the advice is provided and, subject to subsection (3), by the same means as the advice is provided.\n(3) If a Statement of Advice is the means by which the advice is provided, or is given to the client at the same time as the advice is provided, the warning may be given by including it in the Statement of Advice.\n(5) Nothing in this section affects the duty of the provider under section 961B to make reasonable inquiries to obtain complete and accurate information."
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "The adviser must warn that the advice is, or may be, based on incomplete information.",
+        "answer": true
+      },
+      {
+        "text": "If the advice is given in the SOA, the warning can be included in the SOA.",
+        "answer": true
+      },
+      {
+        "text": "Once the warning is given, the adviser no longer needs to make reasonable inquiries.",
+        "answer": false
+      },
+      {
+        "text": "The warning can be sent a week after the advice.",
+        "answer": false
+      }
+    ],
+    "explanation": "The warning is in addition to, not instead of, the duty to make reasonable inquiries. It must be given at the same time as the advice, and by the same means unless the SOA carries it.",
+    "source": "Corps Act s961H, s961B(2)(c)"
+  },
+  {
+    "id": "bid-011",
+    "topic": "best-interests",
+    "principle": "bid-duty",
+    "kind": "flashcard",
+    "angle": "compare",
+    "prompt": "What's the difference between the best interests duty (s961B) and the appropriate advice requirement (s961G)?",
+    "answer": "s961B is about how you advise: acting in the client's best interests, which you can show by following the safe harbour steps. s961G is about the result: you may only give the advice if it would be reasonable to conclude it's appropriate to the client, had you met s961B. Both apply, so a good process doesn't save advice that isn't appropriate.",
+    "keyPoints": [
+      "s961B is about the process of acting in the client's best interests (the safe harbour is one way to show it)",
+      "s961G is about the outcome: the advice itself must be appropriate to the client",
+      "s961G tests appropriateness as if s961B had been met",
+      "Both apply: meeting one doesn't satisfy the other"
+    ],
+    "explanation": "The exam often describes a sound process that ends in an unsuitable recommendation, or the reverse. Name which obligation fails.",
+    "source": "Corps Act s961B, s961G"
+  },
+  {
+    "id": "bid-012",
+    "topic": "best-interests",
+    "principle": "bid-priority",
+    "kind": "spot",
+    "scenario": "An adviser's file note for Sam, 45, who wants to consolidate three super funds.",
+    "prompt": "Tap every line that shows a problem.",
+    "lines": [
+      {
+        "text": "Sam wants one super fund instead of three, with lower total fees."
+      },
+      {
+        "text": "Sam's current fund has death and TPD cover he relies on. I didn't check whether the new fund offers equivalent cover.",
+        "issue": "Insurance is a relevant circumstance for a fund switch. Not checking fails the reasonable investigation and relevant-circumstances steps (s961B(2)(b), (e), (f))."
+      },
+      {
+        "text": "Recommended our in-house fund because the practice gets a higher platform bonus for it, although a cheaper external fund was comparable.",
+        "issue": "This puts the practice's interests ahead of Sam's (priority rule, s961J), and the bonus is likely conflicted remuneration (s963A)."
+      },
+      {
+        "text": "Compared the recommended fund's fees with Sam's three current funds."
+      },
+      {
+        "text": "Sam said he didn't understand the investment options. I didn't explain them because it would take too long.",
+        "issue": "Code Standard 5 requires you to be satisfied, on reasonable grounds, that the client understands the advice and the benefits, costs and risks of the products."
+      },
+      {
+        "text": "Gave Sam his SOA before arranging the rollover."
+      }
+    ],
+    "explanation": "Three lines fail: insurance not investigated, a conflict resolved in the practice's favour, and no check that the client understood. Comparing fees and giving the SOA before implementing are both right.",
+    "source": "Corps Act s961B(2), s961J, s963A; Code of Ethics Standard 5"
+  },
+  {
+    "id": "bid-013",
+    "topic": "best-interests",
+    "principle": "bid-duty",
+    "kind": "flashcard",
+    "angle": "client",
+    "prompt": "A client asks what 'acting in my best interests' actually means for them. Explain it in plain English.",
+    "answer": "It means I start by understanding your goals, situation and needs, and ask more questions if something's missing. I'll only advise on things I have the expertise for, and refer you if I don't. My recommendations have to be based on your circumstances and be appropriate for you. If what's good for me or my licensee conflicts with what's good for you, you come first.",
+    "keyPoints": [
+      "Understand the client's goals, situation and needs, and ask more if something's missing",
+      "Only advise within your expertise, or refer",
+      "Recommendations are based on the client's circumstances and must be appropriate for them",
+      "If interests conflict, the client's come first"
+    ],
+    "explanation": "This covers s961B, s961G and s961J without jargon. Communication is part of the ethics area's learning outcomes.",
+    "source": "Corps Act s961B, s961G, s961J"
+  },
+  {
     "id": "eth-001",
     "topic": "ethics",
+    "principle": "eth-structure",
     "kind": "mcq",
     "prompt": "How many standards are in the Financial Planners and Advisers Code of Ethics 2019?",
-    "options": ["12", "10", "5", "15"],
+    "options": [
+      "12",
+      "10",
+      "5",
+      "15"
+    ],
     "answerIndex": 0,
     "explanation": "The Code has 12 standards. The 5 is the number of values (trustworthiness, competence, honesty, fairness, diligence).",
     "source": "Financial Planners and Advisers Code of Ethics 2019"
@@ -402,9 +947,15 @@
   {
     "id": "eth-002",
     "topic": "ethics",
+    "principle": "eth-conflicts",
     "kind": "mcq",
     "prompt": "Which standard says you must not advise, refer or act in any other manner where you have a conflict of interest or duty?",
-    "options": ["Standard 3", "Standard 1", "Standard 2", "Standard 6"],
+    "options": [
+      "Standard 3",
+      "Standard 1",
+      "Standard 2",
+      "Standard 6"
+    ],
     "answerIndex": 0,
     "explanation": "Standard 3 is the conflicts standard. Standard 1 is acting in line with the law, Standard 2 is acting with integrity and in the client's best interests, and Standard 6 is considering the broad effects of advice.",
     "source": "Code of Ethics Standard 3"
@@ -412,9 +963,15 @@
   {
     "id": "eth-003",
     "topic": "ethics",
+    "principle": "eth-structure",
     "kind": "mcq",
     "prompt": "Which of these is one of the five values in the Code of Ethics?",
-    "options": ["Diligence", "Profitability", "Efficiency", "Loyalty"],
+    "options": [
+      "Diligence",
+      "Profitability",
+      "Efficiency",
+      "Loyalty"
+    ],
     "answerIndex": 0,
     "explanation": "The values are trustworthiness, competence, honesty, fairness and diligence. Efficiency appears in s912A, not the Code's values, and loyalty and profitability aren't listed.",
     "source": "Code of Ethics, values"
@@ -422,6 +979,7 @@
   {
     "id": "eth-004",
     "topic": "ethics",
+    "principle": "eth-consent-fees",
     "kind": "mcq",
     "prompt": "Under Standard 7, what is required before you receive a fee or benefit from a client?",
     "options": [
@@ -437,18 +995,28 @@
   {
     "id": "eth-005",
     "topic": "ethics",
+    "principle": "eth-client-care",
     "kind": "flashcard",
     "prompt": "What does Standard 6 require?",
     "answer": "Take into account the broad effects arising from the client acting on your advice, and actively consider the client's broader, long-term interests and likely circumstances.",
+    "keyPoints": [
+      "Consider the broad effects of the client acting on the advice",
+      "Actively consider the client's broader, long-term interests",
+      "Consider the client's likely circumstances, not just their current ones"
+    ],
     "explanation": "Standard 6 looks past the immediate recommendation to the client's whole situation over time.",
     "source": "Code of Ethics Standard 6"
   },
   {
     "id": "eth-006",
     "topic": "ethics",
+    "principle": "eth-above-law",
     "kind": "truefalse",
     "prompt": "True or false: advice can meet every requirement of the Corporations Act and still breach the Code of Ethics.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": "The Code sets standards above the legal minimum. Spotting scenarios that are lawful but don't comply with the Code is a listed exam learning outcome.",
     "source": "Code of Ethics; ASIC exam preparation guidance"
@@ -456,9 +1024,15 @@
   {
     "id": "eth-007",
     "topic": "ethics",
+    "principle": "eth-records",
     "kind": "mcq",
     "prompt": "Which Code of Ethics standard requires you to keep complete and accurate records of advice and services provided?",
-    "options": ["Standard 8", "Standard 4", "Standard 10", "Standard 12"],
+    "options": [
+      "Standard 8",
+      "Standard 4",
+      "Standard 10",
+      "Standard 12"
+    ],
     "answerIndex": 0,
     "explanation": "Standard 8 covers records. Standard 4 is acting with the client's free, prior and informed consent, Standard 10 is knowledge and skills, and Standard 12 is upholding the profession's standards.",
     "source": "Code of Ethics Standard 8"
@@ -466,9 +1040,15 @@
   {
     "id": "eth-008",
     "topic": "ethics",
+    "principle": "eth-frameworks",
     "kind": "mcq",
     "prompt": "Which ethical approach asks which option will produce the most good and do the least harm for everyone affected?",
-    "options": ["Utilitarian approach", "Rights approach", "Virtue approach", "Justice approach"],
+    "options": [
+      "Utilitarian approach",
+      "Rights approach",
+      "Virtue approach",
+      "Justice approach"
+    ],
     "answerIndex": 0,
     "explanation": "The utilitarian approach weighs outcomes. The rights approach protects people's moral rights, the justice approach asks about fair treatment, and the virtue approach asks what a person of good character would do.",
     "source": "Markkula Center for Applied Ethics, A framework for ethical decision making"
@@ -476,6 +1056,7 @@
   {
     "id": "eth-009",
     "topic": "ethics",
+    "principle": "eth-consent-fees",
     "kind": "mcq",
     "prompt": "Under Standard 4, when may you act for a client?",
     "options": [
@@ -489,17 +1070,121 @@
     "source": "Code of Ethics Standard 4"
   },
   {
+    "id": "eth-010",
+    "topic": "ethics",
+    "principle": "eth-consent-fees",
+    "kind": "multitf",
+    "scenario": "A client pays an ongoing advice fee of $3,300 a year. Each year they sign a valid annual consent. In return they get one automated email a year and no review meeting.",
+    "extract": {
+      "cite": "Code of Ethics, Standard 7 (third paragraph)",
+      "text": "You must satisfy yourself that any fees and charges that the client must pay to you or your principal, and any benefits that you or your principal receive, in connection with acting for the client are fair and reasonable and represent value for money for the client."
+    },
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "A valid annual consent means the fee automatically complies with the Code.",
+        "answer": false
+      },
+      {
+        "text": "The adviser must be satisfied the fee is fair and reasonable and represents value for money.",
+        "answer": true
+      },
+      {
+        "text": "The arrangement could meet the Corporations Act consent rules and still breach the Code.",
+        "answer": true
+      },
+      {
+        "text": "Standard 7 bans ongoing fees altogether.",
+        "answer": false
+      }
+    ],
+    "explanation": "The Code sits above the law. Annual consent satisfies the Corporations Act requirements, but Standard 7 separately requires value for money. That's doubtful when almost no service is delivered.",
+    "source": "Code of Ethics Standard 7; Corps Act Part 7.7A Div 3; ASIC INFO 286"
+  },
+  {
+    "id": "eth-011",
+    "topic": "ethics",
+    "principle": "eth-frameworks",
+    "kind": "flashcard",
+    "angle": "scenario",
+    "prompt": "A client asks you to backdate a file note so it shows a risk discussion that never happened. Use at least two ethical frameworks to explain why you refuse, and say what you'd do.",
+    "answer": "Rights approach: backdating deceives anyone who relies on the file, including the licensee, AFCA and ASIC, and breaks my duty of honesty. Utilitarian approach: the client's short-term benefit is outweighed by harm to everyone who relies on accurate records and to trust in the profession. Virtue approach: an honest professional wouldn't do it. Standard 8 requires complete and accurate records. I'd refuse, explain why, and record the request.",
+    "keyPoints": [
+      "Names and correctly applies at least two frameworks (e.g. utilitarian, rights, justice, common good, virtue)",
+      "Backdating creates false records: Standard 8 requires records to be complete and accurate",
+      "Recognises it's dishonest and undermines trust (values of honesty and trustworthiness)",
+      "Ends with a clear action: refuse, explain and document the request"
+    ],
+    "explanation": "The exam asks you to apply more than one framework to the same dilemma. Different frameworks reaching the same answer makes the decision stronger.",
+    "source": "Markkula Center, A framework for ethical decision making; Code of Ethics values and Standard 8"
+  },
+  {
+    "id": "eth-012",
+    "topic": "ethics",
+    "principle": "eth-client-care",
+    "kind": "spot",
+    "scenario": "An adviser's notes after meetings with Tom and Ana, a couple in their 50s.",
+    "prompt": "Tap every line that breaches the Code of Ethics.",
+    "lines": [
+      {
+        "text": "Explained my services and fees and got their signed consent before starting work."
+      },
+      {
+        "text": "Recommended they withdraw $80,000 from super to clear their car loan. I didn't look at the effect on their retirement because they only asked about debt.",
+        "issue": "Standard 6 requires you to consider the broad effects of acting on the advice and the client's long-term interests, even when advice is scaled."
+      },
+      {
+        "text": "Tom seemed confused about the product's risks. I didn't go into it because Ana understood.",
+        "issue": "Standard 5: you must be satisfied that each client understands the advice and the product's benefits, costs and risks."
+      },
+      {
+        "text": "Accepted concert tickets from the provider of the fund I recommended.",
+        "issue": "Standard 7: you may not receive benefits from a third party other than your principal unless the Corporations Act expressly permits it. It's also a conflict under Standard 3."
+      },
+      {
+        "text": "Saved the fact find, meeting notes and copies of all documents they gave me to their file."
+      }
+    ],
+    "explanation": "Getting consent first (Standard 4) and keeping complete records (Standard 8) are both right. The breaches concern broad effects, client understanding and a third-party benefit.",
+    "source": "Code of Ethics Standards 3, 5, 6 and 7"
+  },
+  {
+    "id": "eth-013",
+    "topic": "ethics",
+    "principle": "eth-consent-fees",
+    "kind": "flashcard",
+    "angle": "client",
+    "prompt": "A client asks why you need their signed consent to fees when they've already said yes on the phone. Explain in plain English.",
+    "answer": "The Code says your consent has to be free, prior and informed: given before I charge, without pressure, and knowing exactly what you're paying and why. It covers everything I'm paid for acting for you. For some fees, like an ongoing fee, the law also requires your written, signed consent, renewed each year. And separately, I have to be satisfied the fee is fair and good value for you.",
+    "keyPoints": [
+      "Consent must be free, prior and informed: before charging, without pressure, knowing what it's for",
+      "It covers all benefits the adviser receives for acting for the client, including fees",
+      "The law requires written, signed consent for some fees, such as ongoing fees renewed each year",
+      "The adviser must also be satisfied the fee is fair, reasonable and value for money"
+    ],
+    "explanation": "This combines Code Standards 4 and 7 with the Corporations Act consent rules for ongoing fees.",
+    "source": "Code of Ethics Standards 4 and 7; Corps Act Part 7.7A Div 3; ASIC INFO 286"
+  },
+  {
     "id": "adv-001",
     "topic": "advice-construction",
+    "principle": "adv-scaled",
     "kind": "flashcard",
     "prompt": "What is scaled advice?",
     "answer": "Personal advice that is limited in scope to particular subject matter, agreed between the adviser and the client. The best interests duty still applies to the advice within that scope.",
+    "keyPoints": [
+      "It's still personal advice",
+      "Its scope is limited to particular subject matter",
+      "The scope is agreed between adviser and client",
+      "The best interests duty still applies to the advice within that scope"
+    ],
     "explanation": "ASIC's guidance explains how to scale advice while still meeting the best interests duty and related obligations.",
     "source": "ASIC RG 244; INFO 267"
   },
   {
     "id": "adv-002",
     "topic": "advice-construction",
+    "principle": "adv-suitability",
     "kind": "mcq",
     "prompt": "A 63-year-old client with low risk tolerance needs to start drawing an income in two years. The adviser recommends a geared, 100% growth-asset portfolio. What is the main problem?",
     "options": [
@@ -515,9 +1200,15 @@
   {
     "id": "adv-003",
     "topic": "advice-construction",
+    "principle": "adv-sequencing",
     "kind": "mcq",
     "prompt": "Poor investment returns just before or early in retirement can do far more damage than the same returns earlier in life. What is this risk called?",
-    "options": ["Sequencing risk", "Longevity risk", "Inflation risk", "Liquidity risk"],
+    "options": [
+      "Sequencing risk",
+      "Longevity risk",
+      "Inflation risk",
+      "Liquidity risk"
+    ],
     "answerIndex": 0,
     "explanation": "Sequencing risk is about the order of returns when balances are largest. Longevity risk is outliving your savings, inflation risk is losing purchasing power, and liquidity risk is not being able to access money when needed.",
     "source": "Iskra & Smark (2017), Financial Planning Research Journal (ASIC reading list)"
@@ -525,6 +1216,7 @@
   {
     "id": "adv-004",
     "topic": "advice-construction",
+    "principle": "adv-risk-profile",
     "kind": "mcq",
     "prompt": "A client has a secure income and large assets, but becomes very anxious about any short-term loss. How would you describe their risk profile?",
     "options": [
@@ -540,9 +1232,13 @@
   {
     "id": "adv-005",
     "topic": "advice-construction",
+    "principle": "adv-scaled",
     "kind": "truefalse",
     "prompt": "True or false: agreeing to scale advice to a single topic removes the best interests duty for that advice.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": "Scaling narrows the subject matter, but the best interests duty and related obligations still apply to the advice given. The adviser must also consider whether the scope is reasonable.",
     "source": "ASIC RG 244; INFO 267"
@@ -550,19 +1246,110 @@
   {
     "id": "adv-006",
     "topic": "advice-construction",
+    "principle": "adv-scaled",
     "kind": "mcq",
     "prompt": "Which ASIC regulatory guide contains an example Statement of Advice for scaled advice to a new client?",
-    "options": ["RG 90", "RG 78", "RG 146", "RG 246"],
+    "options": [
+      "RG 90",
+      "RG 78",
+      "RG 146",
+      "RG 246"
+    ],
     "answerIndex": 0,
     "explanation": "RG 90 is the example SOA. RG 78 covers breach reporting, RG 146 was the old adviser training guide, and RG 246 covers conflicted remuneration.",
     "source": "ASIC RG 90"
   },
   {
+    "id": "adv-007",
+    "topic": "advice-construction",
+    "principle": "adv-scaled",
+    "kind": "multitf",
+    "scenario": "A client wants advice only on whether to make extra contributions to super. In the fact find, the adviser notices $25,000 of credit card debt at 20% interest.",
+    "prompt": "Decide whether each statement is true or false.",
+    "statements": [
+      {
+        "text": "The adviser can scale the advice to super contributions, if that scope is reasonable.",
+        "answer": true
+      },
+      {
+        "text": "Because the advice is scaled, the adviser can ignore the credit card debt completely.",
+        "answer": false
+      },
+      {
+        "text": "The best interests duty still applies to the scaled advice.",
+        "answer": true
+      },
+      {
+        "text": "Scaled advice doesn't need a Statement of Advice.",
+        "answer": false
+      }
+    ],
+    "explanation": "Scaling narrows the subject matter, not the duties. High-interest debt is a relevant circumstance for whether extra contributions are in the client's interests, so it must at least be considered and discussed. Scaled personal advice still needs an SOA.",
+    "source": "Corps Act s961B, s946A; ASIC RG 244; INFO 267"
+  },
+  {
+    "id": "adv-008",
+    "topic": "advice-construction",
+    "principle": "adv-risk-profile",
+    "kind": "flashcard",
+    "angle": "compare",
+    "prompt": "What's the difference between risk tolerance and risk capacity, and why does advice need both?",
+    "answer": "Risk tolerance is willingness: how comfortable the client is with ups, downs and losses. Risk capacity is ability: how much loss their finances can absorb without derailing their goals. They can point in different directions, like a wealthy client who panics at small losses, or a keen client who can't afford any. Advice needs to account for both.",
+    "keyPoints": [
+      "Risk tolerance is the client's willingness to accept volatility and loss",
+      "Risk capacity is their financial ability to absorb losses without harming their goals",
+      "The two can differ, e.g. high capacity but low tolerance",
+      "Suitable advice takes both into account"
+    ],
+    "explanation": "Hunt (2016) on the ASIC reading list covers the psychology of risk profiling. Questionnaires often measure tolerance only.",
+    "source": "Hunt (2016), Investment risk profiling: Lessons from psychology, Financial Planning Research Journal"
+  },
+  {
+    "id": "adv-009",
+    "topic": "advice-construction",
+    "principle": "adv-suitability",
+    "kind": "mcq",
+    "scenario": "Mei, 42, took ten years out of paid work to care for her children and now works part time. Her super balance is far below her partner's.",
+    "prompt": "Which strategy most directly addresses the gap in her super?",
+    "options": [
+      "Contribution splitting or spouse contributions from her partner, if eligible",
+      "Switching her super to a high-growth option to 'catch up'",
+      "Delaying any super advice until she returns to full-time work",
+      "Withdrawing her super early to pay down the mortgage"
+    ],
+    "answerIndex": 0,
+    "explanation": "Splitting and spouse contributions move savings to the lower-balance partner, directly targeting the gap that career breaks create. A growth switch might be part of advice but chasing returns ignores her risk profile. Delaying wastes time, and early access generally isn't available.",
+    "source": "Craft et al. (2018), Retirement outcomes for female primary carers in Australia, Financial Planning Research Journal; ATO rules on contribution splitting and spouse contributions"
+  },
+  {
+    "id": "adv-010",
+    "topic": "advice-construction",
+    "principle": "adv-sequencing",
+    "kind": "flashcard",
+    "angle": "client",
+    "prompt": "Explain sequencing risk in plain English to a 64-year-old client who's about to retire.",
+    "answer": "It's not just how much your investments earn on average, but when the good and bad years happen. A big fall just before or early in retirement hurts most, because your balance is at its largest and you're starting to draw on it. Selling to fund your income in a downturn locks the losses in. We can manage it, for example by holding a cash buffer for the next couple of years of income.",
+    "keyPoints": [
+      "The order of returns matters, not just the average",
+      "Losses just before or early in retirement do the most damage because the balance is largest",
+      "Drawing income in a downturn locks in losses",
+      "Gives a way to manage it, e.g. a cash buffer or lower-risk allocation for near-term income"
+    ],
+    "explanation": "Iskra & Smark (2017) on the ASIC extension list covers sequencing risk for baby boomers.",
+    "source": "Iskra & Smark (2017), Sequencing risk for baby boomers, Financial Planning Research Journal"
+  },
+  {
     "id": "bf-001",
     "topic": "behavioural-finance",
+    "principle": "bf-loss-aversion",
     "kind": "mcq",
     "prompt": "A client won't sell a share that has fallen 40% because selling would 'lock in' the loss. Which bias does this best show?",
-    "options": ["Loss aversion", "Herding", "Overconfidence", "Recency bias"],
+    "options": [
+      "Loss aversion",
+      "Herding",
+      "Overconfidence",
+      "Recency bias"
+    ],
     "answerIndex": 0,
     "explanation": "Losses feel worse than equal gains feel good, so the client avoids realising one. Herding is following the crowd, overconfidence is overrating your own judgement, and recency bias overweights recent events.",
     "source": "Prospect theory (Kahneman & Tversky, 1979)"
@@ -570,9 +1357,15 @@
   {
     "id": "bf-002",
     "topic": "behavioural-finance",
+    "principle": "bf-anchoring-framing",
     "kind": "mcq",
     "prompt": "A client insists their home is worth $900k because that's what a neighbour's sold for two years ago, despite lower recent sales. Which bias is this?",
-    "options": ["Anchoring", "Mental accounting", "Framing", "Status quo bias"],
+    "options": [
+      "Anchoring",
+      "Mental accounting",
+      "Framing",
+      "Status quo bias"
+    ],
     "answerIndex": 0,
     "explanation": "The client is fixed on an initial reference number. Mental accounting is about labelling money, framing is about how a choice is presented, and status quo bias is a preference for not changing.",
     "source": "Tversky & Kahneman (1974), heuristics and biases"
@@ -580,9 +1373,15 @@
   {
     "id": "bf-003",
     "topic": "behavioural-finance",
+    "principle": "bf-mental-accounting",
     "kind": "mcq",
     "prompt": "A client spends their tax refund on a holiday while carrying a credit card balance at 20% interest. Which bias best explains this?",
-    "options": ["Mental accounting", "Anchoring", "Herding", "Confirmation bias"],
+    "options": [
+      "Mental accounting",
+      "Anchoring",
+      "Herding",
+      "Confirmation bias"
+    ],
     "answerIndex": 0,
     "explanation": "The refund is treated as 'bonus' money in a separate mental account, even though paying down the debt is worth more. The other biases don't explain treating money differently by source.",
     "source": "Thaler (1999), mental accounting"
@@ -590,9 +1389,15 @@
   {
     "id": "bf-004",
     "topic": "behavioural-finance",
+    "principle": "bf-social-overconfidence",
     "kind": "mcq",
     "prompt": "A client wants to buy a cryptocurrency because 'everyone at work is in it'. Which bias is this?",
-    "options": ["Herding", "Home bias", "Status quo bias", "Anchoring"],
+    "options": [
+      "Herding",
+      "Home bias",
+      "Status quo bias",
+      "Anchoring"
+    ],
     "answerIndex": 0,
     "explanation": "Herding is copying what others do instead of doing your own analysis. Home bias is favouring domestic assets, status quo bias is resisting change, and anchoring is fixing on a reference point.",
     "source": "Pompian (2012), Behavioural finance and investor types (ASIC reading list)"
@@ -600,18 +1405,30 @@
   {
     "id": "bf-005",
     "topic": "behavioural-finance",
+    "principle": "bf-social-overconfidence",
     "kind": "flashcard",
     "prompt": "What is overconfidence bias, and how does it tend to show up in investors?",
     "answer": "Overestimating your own knowledge or ability to predict outcomes. It shows up as excessive trading, concentrated portfolios and underestimating risk.",
+    "keyPoints": [
+      "Overestimating your own knowledge, skill or ability to predict outcomes",
+      "Shows up as excessive trading",
+      "Shows up as concentrated portfolios and underestimating risk"
+    ],
     "explanation": "Studies of retail brokerage accounts found the most active traders earned the lowest net returns.",
     "source": "Barber & Odean (2000)"
   },
   {
     "id": "bf-006",
     "topic": "behavioural-finance",
+    "principle": "bf-adviser-bias",
     "kind": "mcq",
     "prompt": "An adviser settles on a strategy early, then gives more weight to research that supports it and dismisses research that doesn't. Which bias is the adviser showing?",
-    "options": ["Confirmation bias", "Loss aversion", "Mental accounting", "Herding"],
+    "options": [
+      "Confirmation bias",
+      "Loss aversion",
+      "Mental accounting",
+      "Herding"
+    ],
     "answerIndex": 0,
     "explanation": "Confirmation bias is favouring information that supports an existing view. The exam expects you to spot biases in advisers, not just clients.",
     "source": "Pompian (2012); ASIC exam preparation guidance"
@@ -619,9 +1436,15 @@
   {
     "id": "bf-007",
     "topic": "behavioural-finance",
+    "principle": "bf-anchoring-framing",
     "kind": "mcq",
     "prompt": "A client accepts a strategy described as having a '90% chance of preserving capital' but rejects the same strategy described as having a '10% chance of loss'. Which effect is this?",
-    "options": ["Framing effect", "Overconfidence", "Anchoring", "Recency bias"],
+    "options": [
+      "Framing effect",
+      "Overconfidence",
+      "Anchoring",
+      "Recency bias"
+    ],
     "answerIndex": 0,
     "explanation": "The outcome is identical; only the presentation changed. Advisers need to present risk in balanced ways.",
     "source": "Tversky & Kahneman (1981), framing of decisions"
@@ -629,11 +1452,76 @@
   {
     "id": "bf-008",
     "topic": "behavioural-finance",
+    "principle": "bf-mental-accounting",
     "kind": "truefalse",
     "prompt": "True or false: present bias, the tendency to favour rewards now over larger rewards later, helps explain why people under-save for retirement.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": "Present bias makes future benefits feel smaller than they are, so saving loses out to spending today.",
     "source": "Thaler & Benartzi (2004), Save More Tomorrow"
+  },
+  {
+    "id": "bf-009",
+    "topic": "behavioural-finance",
+    "principle": "bf-loss-aversion",
+    "kind": "flashcard",
+    "angle": "scenario",
+    "prompt": "A client refuses to sell a poor investment because it's 'still down 30% from what I paid'. How would you respond?",
+    "answer": "Recognise loss aversion: losses feel worse than equal gains feel good. Reframe the decision around the investment's future prospects and the client's goals, not the purchase price, because the loss has already happened whether or not they sell. Look at the whole portfolio, not one holding. It's still their decision, so record the advice and their reasons.",
+    "keyPoints": [
+      "Names the bias: loss aversion (losses feel worse than equal gains)",
+      "Reframes around future prospects, not the purchase price: the loss has already happened",
+      "Looks at the whole portfolio and the client's goals",
+      "Respects the client's decision but documents the advice and reasons"
+    ],
+    "explanation": "The exam asks you to spot a bias and to respond to it appropriately. Respecting client autonomy while recording advice ties in with Standard 8.",
+    "source": "Kahneman & Tversky (1979), Prospect theory; Pompian (2012)"
+  },
+  {
+    "id": "bf-010",
+    "topic": "behavioural-finance",
+    "principle": "bf-adviser-bias",
+    "kind": "multitf",
+    "prompt": "Decide whether each statement about biases is true or false.",
+    "statements": [
+      {
+        "text": "Advisers can show confirmation bias in their own research.",
+        "answer": true
+      },
+      {
+        "text": "Herding only affects clients, never advisers.",
+        "answer": false
+      },
+      {
+        "text": "Describing the same strategy as a '90% chance of no loss' rather than a '10% chance of loss' can change a client's decision.",
+        "answer": true
+      },
+      {
+        "text": "Present bias makes future rewards feel larger than they really are.",
+        "answer": false
+      }
+    ],
+    "explanation": "Biases affect advisers too: confirmation bias in research, and herding into popular products. Framing changes decisions even when outcomes are identical. Present bias makes future rewards feel smaller, which is why people under-save.",
+    "source": "Pompian (2012); Tversky & Kahneman (1981); ASIC exam preparation guidance"
+  },
+  {
+    "id": "bf-011",
+    "topic": "behavioural-finance",
+    "principle": "bf-anchoring-framing",
+    "kind": "mcq",
+    "scenario": "A client measures every review against their portfolio's peak value in 2021. Despite strong growth over the last two years, they keep saying they've 'lost money'.",
+    "prompt": "Which bias is the client showing?",
+    "options": [
+      "Anchoring",
+      "Herding",
+      "Mental accounting",
+      "Overconfidence"
+    ],
+    "answerIndex": 0,
+    "explanation": "The client is fixed on one reference point, the 2021 peak, and judges everything against it. Herding is following others, mental accounting is treating money differently by label, and overconfidence is overrating your own judgement.",
+    "source": "Tversky & Kahneman (1974), heuristics and biases; Pompian (2012)"
   }
 ]

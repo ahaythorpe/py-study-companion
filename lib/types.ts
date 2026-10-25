@@ -1,6 +1,6 @@
 // The three examined knowledge areas, as set out in ASIC's Financial adviser
-// exam: Exam preparation guidance (v6.0, September 2026). Questions are split
-// equally across them.
+// exam: Exam preparation guidance (v6.0, September 2026). ASIC doesn't publish
+// how marks are split between them, so practice sessions balance them.
 export type Area = "regulatory" | "ethics" | "construction";
 
 export const AREAS: { id: Area; label: string; summary: string }[] = [
@@ -34,25 +34,46 @@ export type Topic =
 export const TOPICS: { id: Topic; label: string; area: Area; scope: string }[] = [
   { id: "licensing", label: "Licensing, conduct and breach reporting", area: "regulatory", scope: "Part 7.6, s912A, s912DAA, RG 78" },
   { id: "disclosure", label: "Disclosure: FSG, SOA, ROA and PDS", area: "regulatory", scope: "Parts 7.7 and 7.9, RG 175" },
-  { id: "remuneration", label: "Fees and conflicted remuneration", area: "regulatory", scope: "Part 7.7A Div 3–5, RG 246" },
+  { id: "remuneration", label: "Fees and conflicted remuneration", area: "regulatory", scope: "Part 7.7A Div 3 to 5, RG 246" },
   { id: "aml-privacy-tax", label: "AML/CTF, Privacy and tax advice", area: "regulatory", scope: "AML/CTF Act, Privacy Act APPs, TASA" },
-  { id: "best-interests", label: "Best interests duty", area: "ethics", scope: "Part 7.7A Div 2, s961B–s961J" },
+  { id: "best-interests", label: "Best interests duty", area: "ethics", scope: "Part 7.7A Div 2, s961B to s961J" },
   { id: "ethics", label: "Code of Ethics and ethical reasoning", area: "ethics", scope: "Code of Ethics 2019, ethical frameworks" },
   { id: "advice-construction", label: "Advice suitability and scope", area: "construction", scope: "RG 90, RG 244, INFO 267" },
   { id: "behavioural-finance", label: "Consumer behaviour and biases", area: "construction", scope: "Behavioural finance, risk profiling" },
 ];
 
+export type QuestionKind = "mcq" | "truefalse" | "multitf" | "spot" | "flashcard";
+
+/** How a written-answer (flashcard) question asks about its principle. */
+export type Angle = "define" | "scenario" | "compare" | "client";
+
+export const ANGLES: Record<Angle, string> = {
+  define: "Explain it",
+  scenario: "Apply it",
+  compare: "Compare",
+  client: "Explain to a client",
+};
+
 export type Question = {
   id: string; // "bid-001"
   topic: Topic;
-  kind: "mcq" | "truefalse" | "flashcard";
+  principle: string; // data/principles.json id; variants of one idea share it
+  kind: QuestionKind;
+  angle?: Angle; // flashcard only, defaults to "define"
+  scenario?: string; // facts shown above the prompt
+  extract?: { cite: string; text: string }; // law quoted in the question, as in the exam
   prompt: string;
   options?: string[]; // mcq: 4 options; truefalse: ["True", "False"]
   answerIndex?: number; // mcq and truefalse
-  answer?: string; // flashcard only
+  statements?: { text: string; answer: boolean }[]; // multitf: 3-4, all must be right
+  lines?: { text: string; issue?: string }[]; // spot: lines with an issue are the problems
+  answer?: string; // flashcard only: one model answer
+  keyPoints?: string[]; // flashcard only: 2-5 ideas any correct answer must contain
   explanation: string;
   source: string; // "Corps Act s961B"
 };
+
+export type Principle = { id: string; topic: Topic; label: string };
 
 export type Box = 1 | 2 | 3 | 4 | 5;
 

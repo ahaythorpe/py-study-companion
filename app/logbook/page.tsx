@@ -11,8 +11,8 @@ export default function LogbookPage() {
         <h1 className={h1}>PY logbook</h1>
         <p className={intro}>
           Record your work activities, structured training, ethical dilemmas and client
-          notifications by quarter, then download the CSV for your supervisor. Saved in this
-          browser only, so download a copy regularly.
+          notifications by quarter, keep copies of your certificates, then download the CSV for
+          your supervisor. Saved in this browser only, so download a copy regularly.
         </p>
         <p className="max-w-[640px] text-xs text-muted">
           Based on ASIC&apos;s professional year guidance (INFO 297) and the Corporations (Work and

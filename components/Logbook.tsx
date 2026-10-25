@@ -27,9 +27,10 @@ import {
   type PySetup,
   type Quarter,
 } from "@/lib/logbook";
+import { Documents } from "./Documents";
 import { btnGhost, btnPrimary, field, panel } from "./ui";
 
-type Tab = "overview" | "log" | "setup";
+type Tab = "overview" | "log" | "documents" | "setup";
 
 const round = (n: number) => Math.round(n * 100) / 100;
 
@@ -46,12 +47,13 @@ export function Logbook() {
   const tabs: { id: Tab; label: string }[] = [
     { id: "overview", label: "Overview" },
     { id: "log", label: `Log (${book.entries.length})` },
+    { id: "documents", label: "Documents" },
     { id: "setup", label: "Setup" },
   ];
 
   return (
     <div className="space-y-6">
-      <div role="tablist" className="flex gap-1 rounded-xl border border-line bg-surface p-1 sm:w-fit">
+      <div role="tablist" className="flex flex-wrap gap-1 rounded-xl border border-line bg-surface p-1 sm:w-fit">
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -68,6 +70,7 @@ export function Logbook() {
 
       {tab === "overview" && <Overview book={book} onSetup={() => setTab("setup")} />}
       {tab === "log" && <Log book={book} />}
+      {tab === "documents" && <Documents />}
       {tab === "setup" && <Setup setup={book.setup} onSaved={() => setTab("overview")} />}
     </div>
   );
@@ -130,7 +133,7 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
                   <h3 className="font-semibold">Quarter {q}</h3>
                   <p className="text-xs text-muted">
                     {QUARTER_INFO[q].supervision}
-                    {rec.start && ` · ${formatDate(rec.start)}–${formatDate(rec.end) || "?"}`}
+                    {rec.start && ` · ${formatDate(rec.start)} to ${formatDate(rec.end) || "?"}`}
                   </p>
                 </div>
                 {rec.certificateDate ? (

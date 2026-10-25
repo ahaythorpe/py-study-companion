@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 
 const LINKS = [
   { href: "/", label: "Study" },
+  { href: "/prepare", label: "Exam prep" },
+  { href: "/practice", label: "Practice questions" },
   { href: "/logbook", label: "PY logbook" },
   { href: "/reading", label: "Reading log" },
   { href: "/resources", label: "Resources" },

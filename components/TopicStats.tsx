@@ -5,7 +5,7 @@ import { btnDisabled, btnGhost, btnPrimary } from "./ui";
 
 type Props = {
   index: number;
-  topic: { id: Topic; label: string };
+  topic: { id: Topic; label: string; scope: string };
   stats: TopicStatsData;
   loading?: boolean;
 };
@@ -33,6 +33,8 @@ export function TopicStats({ index, topic, stats, loading }: Props) {
             {stats.questionCount === 0
               ? "No questions yet"
               : `${stats.questionCount} ${stats.questionCount === 1 ? "question" : "questions"}`}
+            {" · "}
+            {topic.scope}
           </span>
         </div>
       </div>
@@ -57,7 +59,7 @@ export function TopicStats({ index, topic, stats, loading }: Props) {
       </div>
 
       <div className="flex flex-none gap-2">
-        {stats.mcqCount > 0 ? (
+        {stats.quizCount > 0 ? (
           <Link href={`/quiz/${topic.id}`} className={btnPrimary}>
             Quiz
           </Link>

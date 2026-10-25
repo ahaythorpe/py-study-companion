@@ -12,13 +12,20 @@ Writing the questions is the studying. Do it from your PY materials and the prim
 
 ## Where to look
 
-| Topic | Sources |
-|---|---|
-| Corporations Act | Corporations Act 2001 Chapter 7, ASIC RG 175 |
-| Best interests | Corporations Act Part 7.7A Division 2 (s961B to s961J) |
-| SOA and ROA | Corporations Act Part 7.7 Division 3, ASIC RG 175, RG 244 |
-| Code of Ethics | Financial Planners and Advisers Code of Ethics 2019 (the 12 standards) |
-| Behavioural finance | Your PY / exam study materials |
+Topics follow the three areas in ASIC's *Financial adviser exam: Exam preparation guidance* (v6.0, September 2026). Use its reading list as your source list.
+
+| Exam area | Topic (id, prefix) | Sources |
+|---|---|---|
+| Regulatory and legal obligations | `licensing` (`lic-`) | Corps Act Part 7.6, s912A, s912DAA–DAB, RG 36, RG 78 |
+| | `disclosure` (`dis-`) | Corps Act Parts 7.7 and 7.9, RG 175, INFO 266 |
+| | `remuneration` (`rem-`) | Corps Act Part 7.7A Div 3–5, RG 246, INFO 286/287, Instrument 2017/510 |
+| | `aml-privacy-tax` (`apt-`) | AML/CTF Act (AUSTRAC guidance), Privacy Act APPs, TASA Subdiv 50-AA, INFO 268 |
+| Applied ethical and professional reasoning | `best-interests` (`bid-`) | Corps Act Part 7.7A Div 2 (s961B–s961J), RG 175 |
+| | `ethics` (`eth-`) | Code of Ethics 2019, FASEA FG002, Markkula framework |
+| Financial advice construction | `advice-construction` (`adv-`) | RG 90, RG 244, INFO 267 |
+| | `behavioural-finance` (`bf-`) | Pompian (2012) and the extension reading list |
+
+The exam uses multiple choice (4 options) and true/false questions, so the bank supports both. Write true/false as `"kind": "truefalse"` with `"options": ["True", "False"]`.
 
 ## Format
 

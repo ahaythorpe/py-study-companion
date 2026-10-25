@@ -16,6 +16,7 @@ type Props = {
   questions: Question[];
   /** Only use attempted questions in box 1 or 2 (the /quiz/weak route). */
   weakOnly?: boolean;
+  length?: number;
   emptyMessage?: string;
 };
 
@@ -45,13 +46,14 @@ function Run({
   mode,
   questions,
   weakOnly,
+  length,
   emptyMessage = "No questions yet.",
   progress,
   onRestart,
 }: Props & { progress: Progress; onRestart: () => void }) {
   // Fix the order at the start so answering doesn't reshuffle the session.
   const [session] = useState(() =>
-    buildSession(weakOnly ? weakQuestions(questions, progress) : questions, progress),
+    buildSession(weakOnly ? weakQuestions(questions, progress) : questions, progress, length),
   );
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);

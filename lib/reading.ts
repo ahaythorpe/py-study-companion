@@ -1,10 +1,12 @@
+import suggested from "@/data/suggested-reading.json";
 import { createStore } from "./storage";
 import type { Topic } from "./types";
 
-export type ReadingKind = "book" | "article" | "course" | "podcast";
+export type ReadingKind = "guidance" | "book" | "article" | "course" | "podcast";
 export type ReadingStatus = "to-read" | "reading" | "done";
 
 export const KINDS: { id: ReadingKind; label: string }[] = [
+  { id: "guidance", label: "Law or guidance" },
   { id: "book", label: "Book" },
   { id: "article", label: "Article" },
   { id: "course", label: "Course" },
@@ -55,6 +57,24 @@ export function setStatus(id: string, status: ReadingStatus): void {
         : item,
     ),
   );
+}
+
+/** ASIC's suggested reading for the exam (exam preparation guidance v6.0). */
+export const SUGGESTED = suggested as { title: string; author: string; kind: ReadingKind; topic: Topic }[];
+
+/** Adds any suggested items not already in the log, as "to read". Returns how many were added. */
+export function addSuggested(): number {
+  const items = store.read();
+  const have = new Set(items.map((i) => i.title));
+  const now = Date.now();
+  const fresh: ReadingItem[] = SUGGESTED.filter((s) => !have.has(s.title)).map((s, n) => ({
+    ...s,
+    id: `${now}-asic-${n}`,
+    status: "to-read",
+    addedAt: now,
+  }));
+  if (fresh.length) store.write([...items, ...fresh]);
+  return fresh.length;
 }
 
 export function removeItem(id: string): void {

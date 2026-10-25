@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { StudySession } from "@/components/StudySession";
-import { isTopic, questionsFor, topicLabel } from "@/lib/questions";
+import { isQuizQuestion, isTopic, questionsFor, topicLabel } from "@/lib/questions";
 import { TOPICS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -15,7 +15,7 @@ export default async function QuizPage({ params }: PageProps<"/quiz/[topic]">) {
     <StudySession
       mode="quiz"
       title={`${topicLabel(topic)} quiz`}
-      questions={questionsFor(topic).filter((q) => q.kind === "mcq")}
+      questions={questionsFor(topic).filter(isQuizQuestion)}
     />
   );
 }

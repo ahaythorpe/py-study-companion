@@ -1,5 +1,7 @@
 # Spec
 
+> **Update (v2):** topics now follow ASIC's three exam areas, questions can be `truefalse`, and the PY logbook (`/logbook`) replaced the simple training log. `lib/types.ts` and `lib/logbook.ts` are the source of truth for the data model; the v1 model below is kept for history.
+
 ## Pages
 
 | Route | What it shows |

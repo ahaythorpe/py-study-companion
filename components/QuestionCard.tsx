@@ -20,7 +20,11 @@ function shuffledIndexes(n: number): number[] {
 
 export function QuestionCard({ question, onAnswer }: Props) {
   // Shuffle so the answer's position in the JSON doesn't give it away.
-  const [order] = useState(() => shuffledIndexes(question.options?.length ?? 0));
+  // True/false keeps its natural order.
+  const [order] = useState(() => {
+    const n = question.options?.length ?? 0;
+    return question.kind === "truefalse" ? [0, 1] : shuffledIndexes(n);
+  });
   const [picked, setPicked] = useState<number | null>(null);
   const locked = picked !== null;
   const correctIndex = question.answerIndex ?? 0;
@@ -35,7 +39,7 @@ export function QuestionCard({ question, onAnswer }: Props) {
     <div className="space-y-4">
       <h2 className="text-xl font-semibold leading-snug tracking-[-0.01em]">{question.prompt}</h2>
 
-      <ul className="space-y-2">
+      <ul className={question.kind === "truefalse" ? "grid grid-cols-2 gap-2" : "space-y-2"}>
         {order.map((i) => {
           const option = question.options?.[i];
           let style = "border-line-strong bg-surface hover:border-accent hover:bg-accent-soft";

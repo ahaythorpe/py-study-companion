@@ -1,6 +1,6 @@
 # PY Study Companion
 
-Flashcards and quizzes for the Professional Year: the Corporations Act, best interests duty, the SOA and ROA process, and the exam areas. It tracks the topics you're weak on and brings them back first.
+Study and logbook companion for the Australian Professional Year. Quizzes and flashcards follow the three areas of the ASIC financial adviser exam, and the PY logbook tracks hours, quarters and milestones against ASIC's requirements.
 
 > Learning the craft of advice, building the tools along the way.
 
@@ -16,8 +16,9 @@ Most study tools treat every question equally. This one keeps a score for each t
 - Flashcard mode: flip the card, then mark "got it" or "missed it"
 - Weak-topic tracking: Leitner boxes, plus a flag on any topic under 70% accuracy
 - Progress saved in your browser, so there's no login
-- PY training log: record structured training hours against the 70 h technical / 30 h client care targets, and download a CSV for your supervisor
-- Reading log: track books, articles, courses and podcasts, with status, topic, hours (for CPD) and notes
+- Topics organised by ASIC's three exam areas, with multiple-choice and true/false questions like the real exam, plus mixed practice
+- PY logbook: work activities (1,500 h), structured training (100 h), ethical dilemmas, client notifications, quarter certificates, the pre-Q3 checklist and a CSV for your supervisor
+- Reading log: track your study reading, and import ASIC's suggested exam reading list in one tap
 - Resources: links to the FAAA, the Corporations Act, the Code of Ethics, ASIC regulatory guides and AFCA
 
 ## Tech

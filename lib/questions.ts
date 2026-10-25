@@ -1,11 +1,14 @@
 import data from "@/data/questions.json";
-import { TOPICS, type Question, type Topic } from "./types";
+import { TOPICS, type Area, type Question, type Topic } from "./types";
 
 const PREFIX: Record<Topic, string> = {
-  "corps-act": "ca-",
+  licensing: "lic-",
+  disclosure: "dis-",
+  remuneration: "rem-",
+  "aml-privacy-tax": "apt-",
   "best-interests": "bid-",
-  "soa-roa": "soa-",
   ethics: "eth-",
+  "advice-construction": "adv-",
   "behavioural-finance": "bf-",
 };
 
@@ -28,10 +31,14 @@ function validate(raw: unknown): Question[] {
     if (!q.prompt) fail("missing prompt");
     if (!q.explanation) fail("missing explanation");
     if (!q.source) fail("missing source");
-    if (q.kind === "mcq") {
-      if (q.options?.length !== 4) fail("mcq needs exactly 4 options");
-      if (q.answerIndex === undefined || q.answerIndex < 0 || q.answerIndex > 3) {
-        fail("mcq needs answerIndex 0-3");
+    if (q.kind === "mcq" || q.kind === "truefalse") {
+      const n = q.kind === "mcq" ? 4 : 2;
+      if (q.options?.length !== n) fail(`${q.kind} needs exactly ${n} options`);
+      if (q.kind === "truefalse" && (q.options?.[0] !== "True" || q.options?.[1] !== "False")) {
+        fail('truefalse options must be ["True", "False"]');
+      }
+      if (q.answerIndex === undefined || q.answerIndex < 0 || q.answerIndex >= n) {
+        fail(`answerIndex must be 0-${n - 1}`);
       }
     } else if (q.kind === "flashcard") {
       if (!q.answer) fail("flashcard needs an answer");
@@ -44,8 +51,18 @@ function validate(raw: unknown): Question[] {
 
 export const QUESTIONS: Question[] = validate(data);
 
+/** MCQ and true/false questions; flashcards are for card mode only. */
+export function isQuizQuestion(q: Question): boolean {
+  return q.kind !== "flashcard";
+}
+
 export function questionsFor(topic: Topic): Question[] {
   return QUESTIONS.filter((q) => q.topic === topic);
+}
+
+export function questionsForArea(area: Area): Question[] {
+  const topics = new Set(TOPICS.filter((t) => t.area === area).map((t) => t.id));
+  return QUESTIONS.filter((q) => topics.has(q.topic));
 }
 
 export function isTopic(value: string): value is Topic {

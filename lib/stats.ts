@@ -1,3 +1,4 @@
+import { isQuizQuestion } from "./questions";
 import type { Progress, Question } from "./types";
 
 export const WEAK_THRESHOLD = 0.7;
@@ -5,7 +6,7 @@ export const MIN_ATTEMPTS = 5;
 
 export type TopicStatsData = {
   questionCount: number;
-  mcqCount: number;
+  quizCount: number; // MCQ + true/false
   attempts: number;
   accuracy: number | null; // null until the first attempt
   weak: boolean;
@@ -22,7 +23,7 @@ export function computeStats(questions: Question[], progress: Progress): TopicSt
   const accuracy = attempts === 0 ? null : right / attempts;
   return {
     questionCount: questions.length,
-    mcqCount: questions.filter((q) => q.kind === "mcq").length,
+    quizCount: questions.filter(isQuizQuestion).length,
     attempts,
     accuracy,
     // Wait for 5 attempts so one bad answer doesn't flag the topic.

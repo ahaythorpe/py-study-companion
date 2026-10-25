@@ -4,7 +4,9 @@ import { useState } from "react";
 import {
   KINDS,
   STATUSES,
+  SUGGESTED,
   addItem,
+  addSuggested,
   removeItem,
   setStatus,
   useReading,
@@ -35,6 +37,8 @@ export function ReadingLog() {
 
       <AddForm />
 
+      <SuggestedReading have={new Set(items.map((i) => i.title))} />
+
       <section className="space-y-3">
         <div className="flex flex-wrap gap-2">
           {[{ id: "all" as const, label: "All" }, ...STATUSES].map((s) => (
@@ -63,6 +67,25 @@ export function ReadingLog() {
           </ul>
         )}
       </section>
+    </div>
+  );
+}
+
+function SuggestedReading({ have }: { have: Set<string> }) {
+  const missing = SUGGESTED.filter((s) => !have.has(s.title)).length;
+  if (missing === 0) return null;
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-4 rounded-[14px] border border-line bg-surface p-5">
+      <div className="min-w-0 flex-[1_1_320px]">
+        <h2 className="font-semibold">ASIC&apos;s suggested reading for the exam</h2>
+        <p className="text-sm text-muted">
+          Add the {missing} {missing === SUGGESTED.length ? "" : "remaining "}items from ASIC&apos;s exam
+          preparation guidance (v6.0) to your list as &ldquo;To read&rdquo;, tagged by topic.
+        </p>
+      </div>
+      <button type="button" onClick={() => addSuggested()} className={btnPrimary}>
+        Add reading list
+      </button>
     </div>
   );
 }

@@ -16,6 +16,8 @@ Most study tools treat every question equally. This one keeps a score for each t
 - Flashcard mode: flip the card, then mark "got it" or "missed it"
 - Weak-topic tracking: Leitner boxes, plus a flag on any topic under 70% accuracy
 - Progress saved in your browser, so there's no login
+- Reading log: track books, articles, courses and podcasts, with status, topic, hours (for CPD) and notes
+- Resources: links to the FAAA, the Corporations Act, the Code of Ethics, ASIC regulatory guides and AFCA
 
 ## Tech
 

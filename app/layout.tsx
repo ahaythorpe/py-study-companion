@@ -27,10 +27,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col font-sans">
         <header className="border-b border-line">
-          <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
+          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-4">
             <Link href="/" className="font-semibold tracking-tight">
               PY Study Companion
             </Link>
+            <nav className="flex gap-4 text-sm text-muted">
+              <Link href="/" className="hover:text-accent">
+                Study
+              </Link>
+              <Link href="/reading" className="hover:text-accent">
+                Reading log
+              </Link>
+              <Link href="/resources" className="hover:text-accent">
+                Resources
+              </Link>
+            </nav>
           </div>
         </header>
         <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8">{children}</main>

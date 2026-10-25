@@ -1,0 +1,63 @@
+[
+  {
+    "group": "Professional body",
+    "title": "Financial Advice Association Australia (FAAA)",
+    "url": "https://faaa.au",
+    "note": "Professional association for financial advisers: CPD, events, member resources and advocacy."
+  },
+  {
+    "group": "Legislation",
+    "title": "Corporations Act 2001",
+    "url": "https://www.legislation.gov.au/C2004A00818/latest",
+    "note": "Chapter 7 (financial services), Part 7.7 (SOA/ROA) and Part 7.7A Div 2 (best interests, s961B–s961J).",
+    "topics": ["corps-act", "best-interests", "soa-roa"]
+  },
+  {
+    "group": "Legislation",
+    "title": "Financial Planners and Advisers Code of Ethics 2019",
+    "url": "https://www.legislation.gov.au/F2019L00117/latest",
+    "note": "The 5 values and 12 standards.",
+    "topics": ["ethics"]
+  },
+  {
+    "group": "ASIC guidance",
+    "title": "RG 175: Financial product advisers — conduct and disclosure",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-175-licensing-financial-product-advisers-conduct-and-disclosure/",
+    "note": "How ASIC expects advisers to meet the best interests duty and disclosure obligations.",
+    "topics": ["corps-act", "best-interests", "soa-roa"]
+  },
+  {
+    "group": "ASIC guidance",
+    "title": "RG 244: Giving information, general advice and scaled advice",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-244-giving-information-general-advice-and-scaled-advice/",
+    "note": "Worked examples of scaled advice and the general/personal advice line.",
+    "topics": ["soa-roa", "best-interests"]
+  },
+  {
+    "group": "ASIC guidance",
+    "title": "All ASIC regulatory guides",
+    "url": "https://asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/",
+    "note": "Search every RG by number or keyword."
+  },
+  {
+    "group": "ASIC guidance",
+    "title": "Professional standards for financial advisers",
+    "url": "https://asic.gov.au/for-finance-professionals/afs-licensees/professional-standards-for-financial-advisers/",
+    "note": "Education, the exam, the Professional Year, CPD and the Code of Ethics requirements.",
+    "topics": ["ethics"]
+  },
+  {
+    "group": "Complaints and consumers",
+    "title": "Australian Financial Complaints Authority (AFCA)",
+    "url": "https://www.afca.org.au",
+    "note": "The external dispute resolution scheme. Its published determinations are useful case studies.",
+    "topics": ["corps-act"]
+  },
+  {
+    "group": "Complaints and consumers",
+    "title": "Moneysmart",
+    "url": "https://moneysmart.gov.au",
+    "note": "ASIC's consumer site. Good for explaining concepts to clients in plain English.",
+    "topics": ["behavioural-finance"]
+  }
+]

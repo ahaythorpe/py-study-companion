@@ -1,40 +1,18 @@
-import { useSyncExternalStore } from "react";
+import { createStore } from "./storage";
 import type { Box, Progress } from "./types";
 
-const KEY = "py-progress-v1";
-const CHANGE_EVENT = "py-progress-change";
-
-// Every localStorage call is wrapped: it can throw in private browsing, and it
-// doesn't exist during server render.
-function readRaw(): string | null {
-  try {
-    return window.localStorage.getItem(KEY);
-  } catch {
-    return null;
-  }
-}
-
-function parse(raw: string | null): Progress {
-  if (!raw) return {};
-  try {
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? (parsed as Progress) : {};
-  } catch {
-    return {};
-  }
-}
+const store = createStore<Progress>(
+  "py-progress-v1",
+  {},
+  (v) => typeof v === "object" && v !== null && !Array.isArray(v),
+);
 
 export function loadProgress(): Progress {
-  return parse(readRaw());
+  return store.read();
 }
 
 export function saveProgress(p: Progress): void {
-  try {
-    window.localStorage.setItem(KEY, JSON.stringify(p));
-  } catch {
-    // Storage full or blocked: progress just won't persist.
-  }
-  window.dispatchEvent(new Event(CHANGE_EVENT));
+  store.write(p);
 }
 
 export function recordAnswer(id: string, correct: boolean): Progress {
@@ -54,37 +32,8 @@ export function recordAnswer(id: string, correct: boolean): Progress {
 }
 
 export function resetProgress(): void {
-  try {
-    window.localStorage.removeItem(KEY);
-  } catch {
-    // Nothing to clear.
-  }
-  window.dispatchEvent(new Event(CHANGE_EVENT));
-}
-
-// useSyncExternalStore needs a stable snapshot, so cache the parse by raw string.
-let cachedRaw: string | null | undefined;
-let cached: Progress = {};
-
-function getSnapshot(): Progress {
-  const raw = readRaw();
-  if (raw !== cachedRaw) {
-    cachedRaw = raw;
-    cached = parse(raw);
-  }
-  return cached;
-}
-
-function subscribe(onChange: () => void): () => void {
-  window.addEventListener(CHANGE_EVENT, onChange);
-  window.addEventListener("storage", onChange); // other tabs
-  return () => {
-    window.removeEventListener(CHANGE_EVENT, onChange);
-    window.removeEventListener("storage", onChange);
-  };
+  store.clear();
 }
 
 /** Live progress, or null during server render and hydration. */
-export function useProgress(): Progress | null {
-  return useSyncExternalStore(subscribe, getSnapshot, () => null);
-}
+export const useProgress = store.useValue;

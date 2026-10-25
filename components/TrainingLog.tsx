@@ -14,7 +14,7 @@ import {
   type TrainingCategory,
   type TrainingEntry,
 } from "@/lib/training";
-import { field } from "./ui";
+import { btnGhost, btnPrimary, field } from "./ui";
 
 const round = (n: number) => Math.round(n * 100) / 100;
 
@@ -36,7 +36,7 @@ export function TrainingLog() {
 
   return (
     <div className="space-y-8">
-      <section className="space-y-4 rounded-xl border border-line bg-surface p-5">
+      <section className="space-y-4 rounded-[14px] border border-line bg-surface p-5">
         <ProgressRow label="Total structured training" hours={total} target={TOTAL_TARGET} strong />
         {TARGETS.map((t) => (
           <ProgressRow key={t.id} label={t.label} hours={hoursBy(entries, t.id)} target={t.hours} />
@@ -61,7 +61,7 @@ export function TrainingLog() {
           )}
         </div>
         {entries.length === 0 ? (
-          <p className="rounded-lg bg-surface-2 p-6 text-center text-sm text-muted">
+          <p className="rounded-[14px] border border-line bg-surface p-8 text-center text-sm text-muted">
             No training logged yet. Add your first activity above.
           </p>
         ) : (
@@ -148,7 +148,7 @@ function AddForm() {
   }
 
   return (
-    <form onSubmit={submit} className="space-y-3 rounded-xl border border-line bg-surface p-5">
+    <form onSubmit={submit} className="space-y-3 rounded-[14px] border border-line bg-surface p-5">
       <input name="title" required placeholder="Activity, e.g. SOA writing workshop" className={field} autoFocus />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <input name="date" type="date" defaultValue={defaultDate} className={field} aria-label="Date" />
@@ -190,14 +190,14 @@ function AddForm() {
       <div className="flex gap-2">
         <button
           type="submit"
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+          className={btnPrimary}
         >
           Save
         </button>
         <button
           type="button"
           onClick={() => setOpen(false)}
-          className="rounded-lg border border-line px-4 py-2 text-sm hover:border-accent"
+          className={btnGhost}
         >
           Cancel
         </button>
@@ -215,7 +215,7 @@ function Entry({ entry }: { entry: TrainingEntry }) {
     .join(" · ");
 
   return (
-    <li className="space-y-1.5 rounded-xl border border-line bg-surface p-4">
+    <li className="space-y-1.5 rounded-[14px] border border-line bg-surface p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="font-medium">{entry.title}</p>

@@ -6,7 +6,7 @@ type Props = {
 
 export function Explanation({ correct, explanation, source }: Props) {
   return (
-    <div className="rounded-lg bg-surface-2 p-4 text-sm leading-relaxed">
+    <div className="rounded-[14px] border border-line bg-surface p-5 text-sm leading-relaxed">
       {correct !== undefined && (
         <p className={`mb-1 font-semibold ${correct ? "text-good" : "text-bad"}`}>
           {correct ? "Correct" : "Not quite"}

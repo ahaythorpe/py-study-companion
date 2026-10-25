@@ -1,35 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f5;
-  --foreground: #1c1c1a;
+  --background: #f6f6f4;
+  --foreground: #111827;
   --surface: #ffffff;
-  --surface-2: #efefeb;
-  --line: #dddcd6;
-  --muted: #6b6a63;
-  --accent: #3b5bdb;
-  --accent-soft: #eef1fd;
-  --good: #2f9e44;
-  --good-soft: #ebfbee;
-  --bad: #e03131;
-  --bad-soft: #fff0f0;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141413;
-    --foreground: #ececea;
-    --surface: #1d1d1b;
-    --surface-2: #2a2a27;
-    --line: #3a3a36;
-    --muted: #a3a29b;
-    --accent: #748ffc;
-    --accent-soft: #232a45;
-    --good: #51cf66;
-    --good-soft: #1b2e1f;
-    --bad: #ff6b6b;
-    --bad-soft: #3a1f1f;
-  }
+  --surface-2: #f3f4f6;
+  --line: #e7e7e4;
+  --line-strong: #d9d9d5;
+  --divider: #efefec;
+  --track: #ededea;
+  --muted: #4b5563;
+  --accent: #3b4fd8;
+  --accent-soft: #eef0fd;
+  --warn: #b45309;
+  --warn-soft: #fef3e7;
+  --good: #15803d;
+  --good-soft: #ecfdf3;
+  --bad: #dc2626;
+  --bad-soft: #fef2f2;
 }
 
 @theme inline {
@@ -38,15 +26,19 @@
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-divider: var(--divider);
+  --color-track: var(--track);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
   --color-good: var(--good);
   --color-good-soft: var(--good-soft);
   --color-bad: var(--bad);
   --color-bad-soft: var(--bad-soft);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
 body {

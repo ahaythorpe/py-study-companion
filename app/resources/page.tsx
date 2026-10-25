@@ -18,9 +18,9 @@ export default function ResourcesPage() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl font-semibold">Resources</h1>
-        <p className="text-muted">
+      <div className="space-y-2">
+        <h1 className="text-[32px] font-bold leading-tight tracking-[-0.02em]">Resources</h1>
+        <p className="max-w-[520px] text-[15px] leading-[1.55] text-muted">
           Primary sources for writing and checking questions. Always confirm against the current
           version before relying on it.
         </p>
@@ -38,7 +38,7 @@ export default function ResourcesPage() {
                     href={r.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded-xl border border-line bg-surface p-4 transition-colors hover:border-accent"
+                    className="block rounded-[14px] border border-line bg-surface p-5 transition-colors hover:border-accent"
                   >
                     <p className="font-medium">
                       {r.title} <span className="text-muted">↗</span>

@@ -13,7 +13,7 @@ import {
   type ReadingStatus,
 } from "@/lib/reading";
 import { TOPICS, type Topic } from "@/lib/types";
-import { field } from "./ui";
+import { btnGhost, btnPrimary, field } from "./ui";
 
 export function ReadingLog() {
   const items = useReading();
@@ -43,7 +43,7 @@ export function ReadingLog() {
               type="button"
               onClick={() => setFilter(s.id)}
               className={`rounded-full px-3 py-1 text-sm ${
-                filter === s.id ? "bg-accent text-white" : "bg-surface-2 text-muted hover:text-foreground"
+                filter === s.id ? "bg-accent text-white" : "border border-line bg-surface text-muted hover:text-foreground"
               }`}
             >
               {s.label}
@@ -52,7 +52,7 @@ export function ReadingLog() {
         </div>
 
         {shown.length === 0 ? (
-          <p className="rounded-lg bg-surface-2 p-6 text-center text-sm text-muted">
+          <p className="rounded-[14px] border border-line bg-surface p-8 text-center text-sm text-muted">
             {items.length === 0 ? "Nothing logged yet. Add your first book above." : "Nothing here."}
           </p>
         ) : (
@@ -69,7 +69,7 @@ export function ReadingLog() {
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-xl border border-line bg-surface p-4">
+    <div className="rounded-[14px] border border-line bg-surface p-4">
       <p className="text-2xl font-semibold tabular-nums">{value}</p>
       <p className="text-xs text-muted">{label}</p>
     </div>
@@ -111,7 +111,7 @@ function AddForm() {
   }
 
   return (
-    <form onSubmit={submit} className="space-y-3 rounded-xl border border-line bg-surface p-5">
+    <form onSubmit={submit} className="space-y-3 rounded-[14px] border border-line bg-surface p-5">
       <input name="title" required placeholder="Title" className={field} autoFocus />
       <input name="author" placeholder="Author or source (optional)" className={field} />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -151,14 +151,14 @@ function AddForm() {
       <div className="flex gap-2">
         <button
           type="submit"
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+          className={btnPrimary}
         >
           Save
         </button>
         <button
           type="button"
           onClick={() => setOpen(false)}
-          className="rounded-lg border border-line px-4 py-2 text-sm hover:border-accent"
+          className={btnGhost}
         >
           Cancel
         </button>
@@ -174,7 +174,7 @@ function Item({ item }: { item: ReadingItem }) {
   const meta = [kind, topic, item.hours ? `${item.hours}h` : undefined].filter(Boolean).join(" · ");
 
   return (
-    <li className="space-y-2 rounded-xl border border-line bg-surface p-4">
+    <li className="space-y-2 rounded-[14px] border border-line bg-surface p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className={`font-medium ${item.status === "done" ? "text-muted line-through" : ""}`}>

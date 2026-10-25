@@ -24,12 +24,12 @@ export function Flashcard({ question, onMark }: Props) {
         type="button"
         onClick={() => setFlipped((f) => !f)}
         aria-label={flipped ? "Show question" : "Show answer"}
-        className="flex min-h-56 w-full flex-col justify-center rounded-xl border-2 border-line bg-surface p-6 text-left transition-colors hover:border-accent"
+        className="flex min-h-56 w-full flex-col justify-center rounded-[14px] border border-line bg-surface p-7 text-left transition-colors hover:border-accent"
       >
         <span className="mb-3 text-xs font-medium uppercase tracking-wide text-muted">
           {flipped ? "Answer" : "Question · tap to flip"}
         </span>
-        <span className="text-lg leading-snug">
+        <span className="text-xl font-semibold leading-snug tracking-[-0.01em]">
           {flipped ? backText(question) : question.prompt}
         </span>
       </button>
@@ -41,14 +41,14 @@ export function Flashcard({ question, onMark }: Props) {
             <button
               type="button"
               onClick={() => onMark(false)}
-              className="rounded-lg border-2 border-bad px-4 py-3 font-medium text-bad hover:bg-bad-soft"
+              className="h-11 rounded-[10px] border border-bad bg-surface px-4 text-sm font-semibold text-bad hover:bg-bad-soft"
             >
               Missed it
             </button>
             <button
               type="button"
               onClick={() => onMark(true)}
-              className="rounded-lg border-2 border-good bg-good px-4 py-3 font-medium text-white hover:opacity-90"
+              className="h-11 rounded-[10px] border border-good bg-good px-4 text-sm font-semibold text-white hover:opacity-90"
             >
               Got it
             </button>

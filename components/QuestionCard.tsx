@@ -33,16 +33,16 @@ export function QuestionCard({ question, onAnswer }: Props) {
 
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-medium leading-snug">{question.prompt}</h2>
+      <h2 className="text-xl font-semibold leading-snug tracking-[-0.01em]">{question.prompt}</h2>
 
       <ul className="space-y-2">
         {order.map((i) => {
           const option = question.options?.[i];
-          let style = "border-line hover:border-accent hover:bg-accent-soft";
+          let style = "border-line-strong bg-surface hover:border-accent hover:bg-accent-soft";
           if (locked) {
             if (i === correctIndex) style = "border-good bg-good-soft";
             else if (i === picked) style = "border-bad bg-bad-soft";
-            else style = "border-line opacity-60";
+            else style = "border-line bg-surface opacity-60";
           }
           return (
             <li key={i}>
@@ -50,7 +50,7 @@ export function QuestionCard({ question, onAnswer }: Props) {
                 type="button"
                 onClick={() => pick(i)}
                 disabled={locked}
-                className={`w-full rounded-lg border-2 px-4 py-3 text-left transition-colors disabled:cursor-default ${style}`}
+                className={`w-full rounded-[10px] border-[1.5px] px-4 py-3.5 text-left text-[15px] transition-colors disabled:cursor-default ${style}`}
               >
                 {option}
               </button>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { btnGhost, btnPrimary } from "./ui";
 
 type Props = {
   score: number;
@@ -9,9 +10,9 @@ type Props = {
 export function ResultScreen({ score, total, onRestart }: Props) {
   const pct = total === 0 ? 0 : Math.round((score / total) * 100);
   return (
-    <div className="space-y-6 py-8 text-center">
-      <p className="text-sm uppercase tracking-wide text-muted">Session complete</p>
-      <p className="text-5xl font-semibold">
+    <div className="space-y-6 rounded-[14px] border border-line bg-surface px-6 py-10 text-center">
+      <p className="text-xs font-semibold uppercase tracking-wide text-muted">Session complete</p>
+      <p className="text-5xl font-bold tracking-[-0.02em]">
         {score} / {total}
       </p>
       <p className="text-muted">{pct}% correct. Missed questions will come back first.</p>
@@ -19,13 +20,13 @@ export function ResultScreen({ score, total, onRestart }: Props) {
         <button
           type="button"
           onClick={onRestart}
-          className="rounded-lg bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+          className={btnPrimary}
         >
           Go again
         </button>
         <Link
           href="/"
-          className="rounded-lg border-2 border-line px-5 py-2.5 font-medium hover:border-accent"
+          className={btnGhost}
         >
           Dashboard
         </Link>

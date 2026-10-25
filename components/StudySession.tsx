@@ -8,6 +8,7 @@ import type { Progress, Question } from "@/lib/types";
 import { Flashcard } from "./Flashcard";
 import { QuestionCard } from "./QuestionCard";
 import { ResultScreen } from "./ResultScreen";
+import { btnPrimary } from "./ui";
 
 type Props = {
   mode: "quiz" | "cards";
@@ -23,9 +24,9 @@ export function StudySession(props: Props) {
   const [run, setRun] = useState(0);
 
   return (
-    <div className="space-y-6">
+    <div className="mx-auto max-w-[680px] space-y-8">
       <div className="flex items-baseline justify-between gap-4">
-        <h1 className="text-2xl font-semibold">{props.title}</h1>
+        <h1 className="text-[32px] font-bold leading-tight tracking-[-0.02em]">{props.title}</h1>
         <Link href="/" className="shrink-0 text-sm text-muted hover:text-accent">
           ← Dashboard
         </Link>
@@ -57,7 +58,7 @@ function Run({
   const [answered, setAnswered] = useState(false);
 
   if (session.length === 0) {
-    return <p className="rounded-lg bg-surface-2 p-6 text-center text-muted">{emptyMessage}</p>;
+    return <p className="rounded-[14px] border border-line bg-surface p-8 text-center text-muted">{emptyMessage}</p>;
   }
   if (index >= session.length) {
     return <ResultScreen score={score} total={session.length} onRestart={onRestart} />;
@@ -85,9 +86,9 @@ function Run({
           </span>
           <span>Score {score}</span>
         </div>
-        <div className="h-1.5 overflow-hidden rounded-full bg-surface-2">
+        <div className="h-1.5 overflow-hidden rounded-full bg-track">
           <div
-            className="h-full bg-accent transition-all"
+            className="h-full rounded-full bg-accent transition-all"
             style={{ width: `${(index / session.length) * 100}%` }}
           />
         </div>
@@ -100,7 +101,7 @@ function Run({
             <button
               type="button"
               onClick={next}
-              className="w-full rounded-lg bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
+              className={`${btnPrimary} w-full`}
             >
               {index + 1 === session.length ? "See score" : "Next"}
             </button>

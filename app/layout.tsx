@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Link from "next/link";
+import { NavLinks } from "@/components/NavLinks";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -21,34 +17,34 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
-        <header className="border-b border-line">
-          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-4">
-            <Link href="/" className="font-semibold tracking-tight">
+        <header className="border-b border-line bg-surface">
+          <div className="mx-auto flex min-h-16 max-w-[1040px] flex-wrap items-center justify-between gap-3 px-6 py-2">
+            <Link href="/" className="flex items-center gap-2.5 text-base font-semibold tracking-[-0.01em]">
+              <span className="flex size-7 items-center justify-center rounded-lg bg-accent">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z" />
+                  <path d="M8 7h7" />
+                </svg>
+              </span>
               PY Study Companion
             </Link>
-            <nav className="flex gap-4 text-sm text-muted">
-              <Link href="/" className="hover:text-accent">
-                Study
-              </Link>
-              <Link href="/training" className="hover:text-accent">
-                PY training
-              </Link>
-              <Link href="/reading" className="hover:text-accent">
-                Reading log
-              </Link>
-              <Link href="/resources" className="hover:text-accent">
-                Resources
-              </Link>
-            </nav>
+            <NavLinks />
           </div>
         </header>
-        <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8">{children}</main>
-        <footer className="mx-auto w-full max-w-3xl px-4 py-6 text-xs text-muted">
+        <main className="mx-auto w-full max-w-[1040px] flex-1 px-6 pt-6 pb-16">{children}</main>
+        <footer className="mx-auto w-full max-w-[1040px] px-6 py-6 text-xs text-muted">
           A personal study aid. Not financial advice and not an official ASIC resource.
         </footer>
       </body>

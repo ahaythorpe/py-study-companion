@@ -48,8 +48,8 @@ export function Documents() {
   return (
     <div className="space-y-6">
       <p className={`${panel} p-4 text-sm leading-relaxed text-muted`}>
-        Certificates and sign-offs are saved in this browser only, on this device. Clearing site data
-        or switching browsers loses them, so keep the originals and download a backup after adding
+        Certificates and sign-offs are saved in this browser only on this device. Clearing site data
+        or switching browsers loses them. Keep the originals and download a backup after adding
         new ones.
       </p>
 
@@ -65,7 +65,7 @@ export function Documents() {
 
       {docs.length === 0 ? (
         <p className={`${panel} p-8 text-center text-sm text-muted`}>
-          No documents yet. Upload your qualifications, exam result and quarter certificates above.
+          No documents yet. Upload your qualifications and exam result and quarter certificates above.
         </p>
       ) : (
         DOC_CATEGORIES.filter((c) => docs.some((d) => d.category === c.id)).map((c) => (

@@ -47,7 +47,7 @@ function ExplainCard({ question, onMark }: Props) {
       {!checked ? (
         <div className="space-y-3">
           <label className="block space-y-2 text-sm">
-            <span className="font-medium">Your answer, in your own words</span>
+            <span className="font-medium">Your answer in your own words</span>
             <textarea
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
@@ -57,7 +57,7 @@ function ExplainCard({ question, onMark }: Props) {
             />
           </label>
           <button type="button" onClick={() => setChecked(true)} className={`${answer.trim() ? btnPrimary : btnGhost} w-full`}>
-            {answer.trim() ? "Check my answer" : "I'm not sure, show me"}
+            {answer.trim() ? "Check my answer" : "I'm not sure. Show me"}
           </button>
         </div>
       ) : (
@@ -100,7 +100,7 @@ function ExplainCard({ question, onMark }: Props) {
               <span className="text-muted">
                 {copied
                   ? "Paste it into your AI assistant for detailed feedback."
-                  : "Copies the question, key points and your answer as a marking prompt."}
+                  : "Copies the question and key points and your answer as a marking prompt."}
               </span>
             </div>
           )}
@@ -116,7 +116,7 @@ function ExplainCard({ question, onMark }: Props) {
           >
             {hits === keyPoints.length
               ? `Got it: all ${keyPoints.length} ideas`
-              : `${hits} of ${keyPoints.length} ideas, so review again soon`}
+              : `${hits} of ${keyPoints.length} ideas. Review again soon`}
           </button>
         </>
       )}
@@ -126,7 +126,7 @@ function ExplainCard({ question, onMark }: Props) {
 
 function markingPrompt(q: Question, answer: string): string {
   return [
-    "You're marking my practice answer for the ASIC financial adviser exam (Australia). Mark on understanding, not wording.",
+    "You're marking my practice answer for the ASIC financial adviser exam (Australia). Mark on understanding and not on wording.",
     "",
     `Question: ${q.prompt}`,
     q.scenario ? `Scenario: ${q.scenario}` : "",
@@ -141,7 +141,7 @@ function markingPrompt(q: Question, answer: string): string {
     "My answer:",
     answer,
     "",
-    "For each key point, say whether my answer covers it fully, partly or not at all, quoting the part of my answer that does. Then point out anything in my answer that is legally or factually wrong under current Australian law, and give one sentence on how to improve it. Don't penalise different wording.",
+    "For each key point say whether my answer covers it fully or partly or not at all. Quote the part of my answer that does. Then point out anything in my answer that is legally or factually wrong under current Australian law. Give one sentence on how to improve it. Don't penalise different wording.",
   ]
     .filter((line, i, all) => line !== "" || all[i - 1] !== "")
     .join("\n");
@@ -171,7 +171,7 @@ function FlipCard({ question, onMark }: Props) {
         className="flex min-h-56 w-full flex-col justify-center rounded-[14px] border border-line bg-surface p-7 text-left transition-colors hover:border-accent"
       >
         <span className="mb-3 text-xs font-medium uppercase tracking-wide text-muted">
-          {flipped ? "Answer" : "Question · answer in your head, then tap to flip"}
+          {flipped ? "Answer" : "Question · answer in your head then tap to flip"}
         </span>
         {flipped && <span className="mb-3 text-sm leading-snug text-muted">{question.prompt}</span>}
         <span className="text-xl font-semibold leading-snug tracking-[-0.01em]">

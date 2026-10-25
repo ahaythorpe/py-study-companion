@@ -5,7 +5,7 @@
   { "id": "lic-standards", "topic": "licensing", "label": "Professional standards for relevant providers" },
   { "id": "lic-afca", "topic": "licensing", "label": "Dispute resolution and AFCA" },
 
-  { "id": "dis-soa", "topic": "disclosure", "label": "Statement of Advice: when, what and by when" },
+  { "id": "dis-soa", "topic": "disclosure", "label": "Statement of Advice: content and timing" },
   { "id": "dis-roa", "topic": "disclosure", "label": "Record of Advice" },
   { "id": "dis-general-personal", "topic": "disclosure", "label": "General versus personal advice and the general advice warning" },
   { "id": "dis-fsg", "topic": "disclosure", "label": "Financial Services Guide" },

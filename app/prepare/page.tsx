@@ -21,12 +21,12 @@ const RESOURCES_URL =
 
 // From ASIC's Financial adviser exam: Exam preparation guidance v6.0 and ACER.
 const FORMAT = [
-  "3.5 hours, including 15 minutes of reading time.",
-  "Selected response only: multiple choice (one of four, one mark each) and true/false.",
+  "3.5 hours including 15 minutes of reading time.",
+  "Selected response only: multiple choice (one of four for one mark each) and true/false.",
   "True/false questions can have several statements. You must get every one right to earn the mark.",
-  "No marks are deducted for wrong answers, so answer everything.",
+  "No marks are deducted for wrong answers. Answer everything.",
   "The relevant law is quoted in the question (e.g. a section of the Corporations Act or a Code standard). You don't need to memorise section numbers. You do need to apply them.",
-  "Pass or fail only. ACER sets the pass mark each sitting by standard setting, starting from a credit range of 65 to 74%.",
+  "Pass or fail only. ACER sets the pass mark each sitting by standard setting. It starts from a credit range of 65 to 74%.",
   "Practice questions are in your ACER exam account; ASIC publishes the answers in its Practice question guidance.",
 ];
 
@@ -34,27 +34,27 @@ const FORMAT = [
 const OUTCOMES: Record<Area, string[]> = {
   regulatory: [
     "Apply Chapter 7 to scenarios and identify provider obligations and breaches.",
-    "Apply Chapter 7 to advice documents (FSG, SOA, ROA, PDS) and spot disclosure breaches.",
-    "Work out the consequences of a breach for the adviser, the client and the industry, and what must be reported.",
+    "Apply Chapter 7 to advice documents (FSG · SOA · ROA · PDS) and spot disclosure breaches.",
+    "Work out the consequences of a breach for the adviser and the client and the industry. Know what must be reported.",
     "Tell apart the obligations of the individual adviser and of the licensee.",
     "Apply AML/CTF and Privacy Act requirements to scenarios.",
     "Know the civil penalty provisions for tax (financial) advice in TASA Subdivision 50-AA.",
   ],
   ethics: [
-    "Apply the Code of Ethics to dilemmas and identify compliance, non-compliance and its consequences.",
+    "Apply the Code of Ethics to dilemmas. Identify compliance and non-compliance and its consequences.",
     "Spot conduct that is lawful under the Corporations Act but breaches the Code.",
     "Apply more than one ethical framework to the same dilemma.",
-    "Apply the best interests duty and related obligations, and know when to refer a client.",
-    "Identify biases in yourself and your clients, and how they affect advice.",
-    "Apply the legal and Code requirements for client files, and explain what due diligence means in practice.",
+    "Apply the best interests duty and related obligations. Know when to refer a client.",
+    "Identify biases in yourself and your clients and how they affect advice.",
+    "Apply the legal and Code requirements for client files. Explain what due diligence means in practice.",
   ],
   construction: [
-    "Understand the context in which advice is sought and given, and how it shapes decisions.",
-    "Identify misconduct and inappropriate advice, explain why it's inappropriate, and propose a better course of action.",
+    "Understand the context in which advice is sought and given and how it shapes decisions.",
+    "Identify misconduct and inappropriate advice. Explain why it's inappropriate and propose a better course of action.",
     "Compare population and community profiles at a retail client level.",
     "Identify types of consumer behaviour and decision making.",
     "Evaluate and apply advice strategies suitable for different retail clients.",
-    "Understand risk, including the difference between risk tolerance and risk capacity.",
+    "Understand risk including the difference between risk tolerance and risk capacity.",
   ],
 };
 
@@ -62,39 +62,39 @@ const PLAN: { weeks: string; focus: string; read: string; practise: string }[] =
   {
     weeks: "Weeks 1 to 3",
     focus: "Regulatory and legal obligations",
-    read: "Part 7.7A and RG 175 first (best interests and disclosure underpin everything), then Parts 7.6 and 7.7, RG 78, RG 246, INFO 286.",
-    practise: "Cards for each regulatory topic until most are 'got it', then the topic quizzes.",
+    read: "Part 7.7A and RG 175 first because best interests and disclosure underpin everything. Then Parts 7.6 and 7.7 · RG 78 · RG 246 · INFO 286.",
+    practise: "Cards for each regulatory topic until most are 'got it'. Then the topic quizzes.",
   },
   {
     weeks: "Week 4",
-    focus: "AML/CTF, privacy and tax",
-    read: "AUSTRAC guidance, the APPs and notifiable data breaches, TPB Info Sheet 20/2014 and INFO 268.",
-    practise: "AML/CTF, privacy and tax cards and quiz. Write two scenario questions of your own.",
+    focus: "AML/CTF and privacy and tax",
+    read: "AUSTRAC guidance · the APPs and notifiable data breaches · TPB Info Sheet 20/2014 and INFO 268.",
+    practise: "AML/CTF and privacy and tax cards and quiz. Write two scenario questions of your own.",
   },
   {
     weeks: "Weeks 5 to 6",
     focus: "Applied ethics and best interests",
-    read: "The Code of Ethics and explanatory statement, FG002, and the Markkula framework.",
-    practise: "For each standard, write one scenario that is lawful but breaches the Code. Take the best interests and ethics quizzes.",
+    read: "The Code of Ethics and explanatory statement · FG002 · the Markkula framework.",
+    practise: "For each standard write one scenario that is lawful but breaches the Code. Take the best interests and ethics quizzes.",
   },
   {
     weeks: "Weeks 7 to 8",
     focus: "Advice construction and behavioural finance",
-    read: "RG 90, RG 244, INFO 266 and INFO 267 (with the example SOA), and Pompian.",
+    read: "RG 90 · RG 244 · INFO 266 and INFO 267 (with the example SOA) · Pompian.",
     practise: "Read the example SOAs and list what makes them compliant. Advice construction and behavioural finance quizzes.",
   },
   {
     weeks: "Weeks 9 to 10",
     focus: "Exam conditions",
     read: "Go back over your notes on your weakest topic.",
-    practise: "ACER practice questions under timed conditions, mixed practice daily, and weak questions until none are left.",
+    practise: "ACER practice questions under timed conditions. Mixed practice daily. Weak questions until none are left.",
   },
 ];
 
 const METHOD: { title: string; body: string }[] = [
   {
     title: "Read with the law open",
-    body: "Because the exam quotes the statute, practise the way you'll be tested: read the scenario, find the obligation in the provided text, then decide whether it was breached. Don't learn section numbers by rote.",
+    body: "The exam quotes the statute. Practise the way you'll be tested. Read the scenario and find the obligation in the provided text. Then decide whether it was breached. Don't learn section numbers by rote.",
   },
   {
     title: "Recall before you recognise",
@@ -106,7 +106,7 @@ const METHOD: { title: string; body: string }[] = [
   },
   {
     title: "Explain why the wrong options are wrong",
-    body: "After each quiz answer, say why each distractor is wrong. Exam distractors use real terms applied to the wrong situation.",
+    body: "After each quiz answer say why each distractor is wrong. Exam distractors use real terms applied to the wrong situation.",
   },
   {
     title: "Write your own questions",
@@ -114,7 +114,7 @@ const METHOD: { title: string; body: string }[] = [
   },
   {
     title: "Rehearse the exam",
-    body: "At least twice, sit ACER's practice questions in one timed session. Answer everything, flag hard questions, and use the navigation bar to come back to them.",
+    body: "At least twice sit ACER's practice questions in one timed session. Answer everything and flag hard questions. Use the navigation bar to come back to them.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function PreparePage() {
       <div className="space-y-2">
         <h1 className="text-[32px] font-bold leading-tight tracking-[-0.02em]">Exam prep</h1>
         <p className="max-w-[560px] text-[15px] leading-[1.55] text-muted">
-          How the ASIC financial adviser exam works, what it tests, a study plan and the full reading list.
+          How the ASIC financial adviser exam works and what it tests. A study plan and the full reading list.
           Based on ASIC&apos;s{" "}
           <a href={GUIDE_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
             Exam preparation guidance v6.0 (September 2026)
@@ -212,7 +212,7 @@ export default function PreparePage() {
         </div>
         <p className="text-sm text-muted">
           In this app: <Link href="/quiz/mixed" className="text-accent hover:underline">exam-style practice</Link>{" "}
-          mixes all three areas, and <Link href="/quiz/weak" className="text-accent hover:underline">weak questions</Link>{" "}
+          mixes all three areas. <Link href="/quiz/weak" className="text-accent hover:underline">Weak questions</Link>{" "}
           retests what you&apos;ve missed. This app&apos;s true/false questions have one statement each; the real
           exam&apos;s can have several.
         </p>
@@ -222,14 +222,14 @@ export default function PreparePage() {
         <div className="space-y-1">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">Reading list</h2>
           <p className="max-w-[560px] text-sm text-muted">
-            ASIC&apos;s suggested reading is for everyone; extension reading is optional. You aren&apos;t
-            expected to memorise any of it, but you should understand how it applies to advice. Add the
+            ASIC&apos;s suggested reading is for everyone. Extension reading is optional. You aren&apos;t
+            expected to memorise any of it. You should understand how it applies to advice. Add the
             suggested items to your <Link href="/reading" className="text-accent hover:underline">reading log</Link>{" "}
-            in one tap, or download the{" "}
+            in one tap. Or download the{" "}
             <a href="/study-pack" download="py-study-pack.md" className="text-accent hover:underline">
               study pack
             </a>{" "}
-            (questions, answers and this list as one file) to read offline or give to an AI assistant.
+            (questions and answers and this list as one file) to read offline or give to an AI assistant.
           </p>
         </div>
         {AREAS.map((area) => (

@@ -17,7 +17,7 @@ const serif = Source_Serif_4({
 export const metadata: Metadata = {
   title: "PY Study Companion",
   description:
-    "Flashcards and quizzes for the Professional Year, with weak-topic tracking.",
+    "Study tools for the Professional Year with weak-topic tracking.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -58,8 +58,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="mx-auto max-w-[1040px] space-y-1 px-6 py-6 text-xs leading-relaxed text-muted">
             <p className="font-medium text-foreground">Independent study tool</p>
             <p>
-              Not affiliated with or endorsed by ASIC, ACER or any AFS licensee. Not financial advice. Content is
-              checked against primary sources but law changes, so confirm against the current legislation and
+              Not affiliated with or endorsed by ASIC or ACER or any AFS licensee. Not financial advice. Content
+              is checked against primary sources but the law changes. Confirm against the current legislation and
               ASIC guidance before relying on it.
             </p>
           </div>

@@ -90,7 +90,7 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
           <div>
             <h2 className="font-semibold">Set up your Professional Year</h2>
             <p className="text-sm text-muted">
-              Add your start date, supervisor and licensee so the checklist and dates work.
+              Add your start date and supervisor and licensee so the checklist and dates work.
             </p>
           </div>
           <button type="button" onClick={onSetup} className={btnPrimary}>
@@ -101,9 +101,9 @@ function Overview({ book, onSetup }: { book: LogbookData; onSetup: () => void })
 
       {q3Started && !s.q3Ready && (
         <div className="rounded-[14px] border border-warn/30 bg-warn-soft p-4 text-sm text-warn">
-          You have Q3 or Q4 entries, but not every requirement for starting Q3 is ticked below. Before
-          Q3 you need both Q1 and Q2 certificates, the qualifications standard, a passed exam, and
-          licensee authorisation.
+          You have Q3 or Q4 entries but not every requirement for starting Q3 is ticked below. Before
+          Q3 you need both Q1 and Q2 certificates and the qualifications standard. You also need a passed
+          exam and licensee authorisation.
         </div>
       )}
 
@@ -349,10 +349,10 @@ function AddEntry({ setup }: { setup: PySetup }) {
         className={field}
         placeholder={
           type === "dilemma"
-            ? "Dilemma, e.g. Client asks to switch super against their interests"
+            ? "Dilemma: e.g. Client asks to switch super against their interests"
             : type === "notification"
-              ? "Client, e.g. J. Smith (initials only)"
-              : "What you did, e.g. Drafted SOA for retirement strategy"
+              ? "Client: e.g. J. Smith (initials only)"
+              : "What you did: e.g. Drafted SOA for retirement strategy"
         }
       />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -384,9 +384,9 @@ function AddEntry({ setup }: { setup: PySetup }) {
           ))}
         </select>
       )}
-      {type === "training" && <input name="provider" placeholder="Provider (e.g. licensee, university, FAAA)" className={field} />}
+      {type === "training" && <input name="provider" placeholder="Provider (e.g. licensee or university or FAAA)" className={field} />}
       {type === "dilemma" && (
-        <input name="standards" placeholder="Code of Ethics standards applied (e.g. 2, 3, 6)" className={field} />
+        <input name="standards" placeholder="Code of Ethics standards applied (e.g. 2 3 6)" className={field} />
       )}
       <textarea
         name="details"
@@ -394,7 +394,7 @@ function AddEntry({ setup }: { setup: PySetup }) {
         className={field}
         placeholder={
           type === "dilemma"
-            ? "The issue, options considered, and how you resolved it"
+            ? "The issue and the options considered. How you resolved it"
             : "Details (optional). Don't include client names or personal information."
         }
       />
@@ -434,7 +434,7 @@ function Entry({ entry, counts }: { entry: LogEntry; counts: boolean }) {
       <div className="flex flex-wrap items-center gap-2">
         <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${badge[entry.type]}`}>{typeLabel}</span>
         {entry.standards && <span className="text-xs text-muted">Standards: {entry.standards}</span>}
-        {!counts && <span className="text-xs text-warn">Before PY start, doesn&apos;t count</span>}
+        {!counts && <span className="text-xs text-warn">Before PY start. Doesn&apos;t count</span>}
       </div>
       {entry.details && <p className="whitespace-pre-line text-sm">{entry.details}</p>}
       <div className="text-xs text-muted">

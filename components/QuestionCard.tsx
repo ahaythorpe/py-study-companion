@@ -136,7 +136,7 @@ function WhyWrong({ question, picked }: { question: Question; picked: number }) 
         />
       </label>
       <button type="button" onClick={() => setRevealed(true)} className={reason.trim() ? btnPrimary : btnGhost}>
-        {reason.trim() ? "Compare with explanation" : "Skip, show explanation"}
+        {reason.trim() ? "Compare with explanation" : "Skip and show explanation"}
       </button>
     </div>
   );

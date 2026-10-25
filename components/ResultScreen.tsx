@@ -20,7 +20,7 @@ export function ResultScreen({ score, total, onRestart }: Props) {
         {pct >= 75
           ? "Above the top of the 65 to 74% range ASIC starts from when setting the pass mark."
           : pct >= 65
-            ? "Inside the 65 to 74% range ASIC starts from when setting the pass mark, so aim higher for a buffer."
+            ? "Inside the 65 to 74% range ASIC starts from when setting the pass mark. Aim higher for a buffer."
             : "Below the 65 to 74% range ASIC starts from when setting the pass mark."}{" "}
         Missed questions will come back first.
       </p>

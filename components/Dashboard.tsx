@@ -38,8 +38,8 @@ export function Dashboard() {
           <h1 className={h1}>Your topics</h1>
           <p className={intro}>
             Organised by the three areas of the ASIC financial adviser exam. After 5 attempts a topic is
-            weak under 65%, borderline at 65 to 74% (ASIC&apos;s starting range for the pass mark) and
-            exam-ready from 75%. Missed questions come back first.
+            weak under 65%. It is borderline at 65 to 74% (ASIC&apos;s starting range for the pass mark).
+            It is exam-ready from 75%. Missed questions come back first.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -103,7 +103,7 @@ export function Dashboard() {
                 ? "…"
                 : weakCount === 0
                   ? "Nothing to review yet. Questions you miss land here."
-                  : `${weakCount} ${weakCount === 1 ? "question" : "questions"} to review across all topics, worst first.`}
+                  : `${weakCount} ${weakCount === 1 ? "question" : "questions"} to review across all topics. Worst first.`}
             </p>
           </div>
         </div>
@@ -203,7 +203,7 @@ function ResetButton() {
         }}
         className="rounded-lg bg-bad px-3 py-1.5 font-medium text-white hover:opacity-90"
       >
-        Yes, reset
+        Yes reset
       </button>
       <button
         type="button"

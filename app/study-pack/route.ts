@@ -11,8 +11,8 @@ function studyPack(): string {
   const lines: string[] = [
     "# PY Study Companion: study pack",
     "",
-    "Questions, answers and the reading list for the ASIC financial adviser exam. A personal study aid,",
-    "not financial advice and not an official ASIC resource. Check anything you rely on against the current law.",
+    "Questions and answers and the reading list for the ASIC financial adviser exam. An independent study aid.",
+    "Not financial advice and not an official ASIC resource. Check anything you rely on against the current law.",
     "",
   ];
 

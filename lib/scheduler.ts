@@ -1,4 +1,4 @@
-import type { Progress, Question } from "./types";
+import { AREAS, TOPICS, type Progress, type Question } from "./types";
 
 export const SESSION_LENGTH = 10;
 
@@ -25,6 +25,22 @@ export function buildSession(
   return shuffle(questions)
     .sort((a, b) => box(a) - box(b) || lastSeen(a) - lastSeen(b))
     .slice(0, length);
+}
+
+/**
+ * Exam-style mix: the real exam splits questions equally across the three
+ * areas, so take the same number from each, Leitner-ordered, then shuffle.
+ */
+export function buildBalancedSession(
+  questions: Question[],
+  progress: Progress,
+  perArea: number,
+): Question[] {
+  const areaOf = (q: Question) => TOPICS.find((t) => t.id === q.topic)?.area;
+  const picked = AREAS.flatMap((area) =>
+    buildSession(questions.filter((q) => areaOf(q) === area.id), progress, perArea),
+  );
+  return shuffle(picked);
 }
 
 /** Questions you've attempted that sit in box 1 or 2, across all topics. */

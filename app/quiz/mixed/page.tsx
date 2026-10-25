@@ -5,9 +5,9 @@ export default function MixedQuizPage() {
   return (
     <StudySession
       mode="quiz"
-      title="Mixed practice"
+      title="Exam-style mixed practice"
       questions={QUESTIONS.filter(isQuizQuestion)}
-      length={20}
+      perArea={7}
     />
   );
 }

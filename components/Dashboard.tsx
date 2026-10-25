@@ -6,7 +6,7 @@ import { formatDate, today, useLogbook } from "@/lib/logbook";
 import { resetProgress, useProgress } from "@/lib/progress";
 import { QUESTIONS, isQuizQuestion, questionsFor, questionsForArea } from "@/lib/questions";
 import { weakQuestions } from "@/lib/scheduler";
-import { computeStats } from "@/lib/stats";
+import { READINESS, computeStats } from "@/lib/stats";
 import { AREAS, TOPICS } from "@/lib/types";
 import { TopicStats } from "./TopicStats";
 import { btnDisabled, btnGhost, btnPrimary, h1, intro, panel } from "./ui";
@@ -37,8 +37,9 @@ export function Dashboard() {
         <div className="flex flex-col gap-2">
           <h1 className={h1}>Your topics</h1>
           <p className={intro}>
-            Organised by the three areas of the ASIC financial adviser exam. Topics under 70% accuracy
-            after 5 attempts are flagged weak, and missed questions come back first.
+            Organised by the three areas of the ASIC financial adviser exam. After 5 attempts a topic is
+            weak under 65%, borderline at 65–74% (ASIC&apos;s starting range for the pass mark) and
+            exam-ready from 75%. Missed questions come back first.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -72,15 +73,18 @@ export function Dashboard() {
                 </span>
               ) : null}
             </h2>
-            <p className="mt-0.5 text-sm text-muted">
-              70+ multiple-choice and true/false questions, split equally across 3 areas · 3.5 hours
-              including 15 min reading · relevant law is quoted in the questions · must pass before
-              PY quarter 3.
-            </p>
+            <ul className="mt-1.5 grid gap-x-6 gap-y-1 text-sm text-muted sm:grid-cols-2">
+              <li>Multiple choice only, 70+ questions (no written answers since Jan 2024)</li>
+              <li>Equal split across the 3 areas below</li>
+              <li>Open book for statutory material: the law is quoted in the question</li>
+              <li>Pass mark set each sitting from a 65–74% credit range</li>
+              <li>3.5 hours including 15 min reading; no penalty for wrong answers</li>
+              <li>Must be passed before PY quarter 3</li>
+            </ul>
           </div>
         </div>
         <Link href="/quiz/mixed" className={btnPrimary}>
-          Mixed practice
+          Exam-style practice
         </Link>
       </section>
 
@@ -124,8 +128,13 @@ export function Dashboard() {
                 <h2 className="text-lg font-semibold tracking-[-0.01em]">{area.label}</h2>
                 <p className="text-sm text-muted">{area.summary}</p>
               </div>
-              <span className="text-sm font-medium tabular-nums text-muted">
+              <span className="flex items-center gap-2 text-sm font-medium tabular-nums text-muted">
                 {loading || areaStats.accuracy === null ? "Not started" : `${Math.round(areaStats.accuracy * 100)}% accuracy`}
+                {!loading && READINESS[areaStats.readiness].badge && (
+                  <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${READINESS[areaStats.readiness].badge}`}>
+                    {READINESS[areaStats.readiness].label}
+                  </span>
+                )}
               </span>
             </div>
             <div className={`${panel} overflow-hidden`}>

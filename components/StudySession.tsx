@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { recordAnswer, useProgress } from "@/lib/progress";
-import { buildSession, weakQuestions } from "@/lib/scheduler";
+import { buildBalancedSession, buildSession, weakQuestions } from "@/lib/scheduler";
 import type { Progress, Question } from "@/lib/types";
 import { Flashcard } from "./Flashcard";
 import { QuestionCard } from "./QuestionCard";
@@ -17,6 +17,8 @@ type Props = {
   /** Only use attempted questions in box 1 or 2 (the /quiz/weak route). */
   weakOnly?: boolean;
   length?: number;
+  /** Exam-style: this many questions from each of the three areas. */
+  perArea?: number;
   emptyMessage?: string;
 };
 
@@ -47,14 +49,16 @@ function Run({
   questions,
   weakOnly,
   length,
+  perArea,
   emptyMessage = "No questions yet.",
   progress,
   onRestart,
 }: Props & { progress: Progress; onRestart: () => void }) {
   // Fix the order at the start so answering doesn't reshuffle the session.
-  const [session] = useState(() =>
-    buildSession(weakOnly ? weakQuestions(questions, progress) : questions, progress, length),
-  );
+  const [session] = useState(() => {
+    if (perArea) return buildBalancedSession(questions, progress, perArea);
+    return buildSession(weakOnly ? weakQuestions(questions, progress) : questions, progress, length);
+  });
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);

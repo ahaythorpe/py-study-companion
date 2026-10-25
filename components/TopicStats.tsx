@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { TopicStatsData } from "@/lib/stats";
+import { READINESS, type TopicStatsData } from "@/lib/stats";
 import type { Topic } from "@/lib/types";
 import { btnDisabled, btnGhost, btnPrimary } from "./ui";
 
@@ -12,7 +12,8 @@ type Props = {
 
 export function TopicStats({ index, topic, stats, loading }: Props) {
   const pct = stats.accuracy === null ? 0 : Math.round(stats.accuracy * 100);
-  const weak = !loading && stats.weak;
+  const readiness = READINESS[stats.readiness];
+  const showBadge = !loading && readiness.badge !== "";
 
   return (
     <div className="flex flex-wrap items-center gap-x-8 gap-y-4 p-5 [&+&]:border-t [&+&]:border-divider">
@@ -23,9 +24,9 @@ export function TopicStats({ index, topic, stats, loading }: Props) {
         <div className="min-w-0">
           <h3 className="flex flex-wrap items-center gap-2 text-base font-semibold">
             {topic.label}
-            {weak && (
-              <span className="rounded-full bg-warn-soft px-2 py-0.5 text-xs font-semibold text-warn">
-                Weak
+            {showBadge && (
+              <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${readiness.badge}`}>
+                {readiness.label}
               </span>
             )}
           </h3>
@@ -52,7 +53,7 @@ export function TopicStats({ index, topic, stats, loading }: Props) {
         </div>
         <div className="h-1.5 overflow-hidden rounded-full bg-track">
           <div
-            className={`h-1.5 rounded-full ${weak ? "bg-warn" : "bg-accent"}`}
+            className={`h-1.5 rounded-full ${loading ? "" : readiness.bar}`}
             style={{ width: `${loading ? 0 : pct}%` }}
           />
         </div>

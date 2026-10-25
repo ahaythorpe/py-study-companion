@@ -14,7 +14,7 @@ Most study tools treat every question equally. This one keeps a score for each t
 
 - Quiz mode: multiple choice with an explanation and a source reference for every answer
 - Flashcard mode: flip the card, then mark "got it" or "missed it"
-- Weak-topic tracking: Leitner boxes, plus a flag on any topic under 70% accuracy
+- Readiness tracking: Leitner boxes, and after 5 attempts each topic is rated weak (<65%), borderline (65–74%, ASIC's starting range for the pass mark) or exam-ready (75%+)
 - Progress saved in your browser, so there's no login
 - Topics organised by ASIC's three exam areas, with multiple-choice and true/false questions like the real exam, plus mixed practice
 - PY logbook: work activities (1,500 h), structured training (100 h), ethical dilemmas, client notifications, quarter certificates, the pre-Q3 checklist and a CSV for your supervisor

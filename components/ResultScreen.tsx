@@ -15,7 +15,15 @@ export function ResultScreen({ score, total, onRestart }: Props) {
       <p className="text-5xl font-bold tracking-[-0.02em]">
         {score} / {total}
       </p>
-      <p className="text-muted">{pct}% correct. Missed questions will come back first.</p>
+      <p className="text-muted">
+        {pct}% correct.{" "}
+        {pct >= 75
+          ? "Above the top of the 65–74% range ASIC starts from when setting the pass mark."
+          : pct >= 65
+            ? "Inside the 65–74% range ASIC starts from when setting the pass mark, so aim higher for a buffer."
+            : "Below the 65–74% range ASIC starts from when setting the pass mark."}{" "}
+        Missed questions will come back first.
+      </p>
       <div className="flex justify-center gap-3">
         <button
           type="button"

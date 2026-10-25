@@ -4,6 +4,8 @@ Flashcards and quizzes for the Professional Year: the Corporations Act, best int
 
 > Learning the craft of advice, building the tools along the way.
 
+**Live:** https://py-study-companion.vercel.app
+
 ## Why
 
 Most study tools treat every question equally. This one keeps a score for each topic, so study time goes where it's needed.
